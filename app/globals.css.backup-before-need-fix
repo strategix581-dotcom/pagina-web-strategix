@@ -104,6 +104,74 @@ button {
   gap: 14px;
 }
 
+.language-selector {
+  position: relative;
+}
+
+.language-button {
+  height: 40px;
+  min-width: 62px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.language-button span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.language-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 160px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(18, 16, 23, 0.96);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.language-menu button {
+  width: 100%;
+  padding: 10px 11px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.language-menu button:hover,
+.language-menu button.active {
+  background: rgba(143, 85, 255, 0.16);
+}
+
+.language-menu button span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.language-menu button small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
 .nav-project {
   min-height: 40px;
   padding: 0 17px;
@@ -578,6 +646,11 @@ button {
     font-size: 9px;
   }
 
+  .language-button {
+    min-width: 52px;
+    padding: 0 10px;
+  }
+
   .hero-new,
   .industries-strategix {
     width: calc(100% - 32px);
@@ -783,9 +856,112 @@ button {
 
 /* LANGUAGE */
 
-.strategix-nav .strategix-nav .strategix-nav /* LANGUAGE MENU */
+.strategix-nav .language-selector {
+  position: relative;
+}
 
-.strategix-nav .strategix-nav .strategix-nav .strategix-nav /* PROJECT BUTTON */
+.strategix-nav .language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 58px;
+  height: 42px;
+
+  padding: 0 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.strategix-nav .language-button:hover {
+  border-color: rgba(169, 112, 255, 0.65);
+  background: rgba(169, 112, 255, 0.06);
+}
+
+.strategix-nav .language-button span {
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* LANGUAGE MENU */
+
+.strategix-nav .language-menu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 155px;
+
+  padding: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  background: rgba(18, 15, 28, 0.97);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.strategix-nav .language-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 11px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.strategix-nav .language-menu button:hover,
+.strategix-nav .language-menu button.active {
+  background: rgba(169, 112, 255, 0.12);
+  color: #ffffff;
+}
+
+.strategix-nav .language-menu button span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.strategix-nav .language-menu button small {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* PROJECT BUTTON */
 
 .strategix-nav .nav-project {
   display: inline-flex;
@@ -878,7 +1054,14 @@ button {
     gap: 8px;
   }
 
-  .strategix-nav .strategix-nav .nav-project {
+  .strategix-nav .language-button {
+    min-width: 52px;
+    height: 38px;
+
+    padding: 0 10px;
+  }
+
+  .strategix-nav .nav-project {
     min-height: 38px;
 
     padding: 0 12px;
@@ -1022,9 +1205,112 @@ button {
 
 /* LANGUAGE */
 
-.strategix-nav .strategix-nav .strategix-nav /* LANGUAGE MENU */
+.strategix-nav .language-selector {
+  position: relative;
+}
 
-.strategix-nav .strategix-nav .strategix-nav .strategix-nav /* PROJECT BUTTON */
+.strategix-nav .language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 58px;
+  height: 42px;
+
+  padding: 0 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.strategix-nav .language-button:hover {
+  border-color: rgba(169, 112, 255, 0.65);
+  background: rgba(169, 112, 255, 0.06);
+}
+
+.strategix-nav .language-button span {
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* LANGUAGE MENU */
+
+.strategix-nav .language-menu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 155px;
+
+  padding: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  background: rgba(18, 15, 28, 0.97);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.strategix-nav .language-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 11px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.strategix-nav .language-menu button:hover,
+.strategix-nav .language-menu button.active {
+  background: rgba(169, 112, 255, 0.12);
+  color: #ffffff;
+}
+
+.strategix-nav .language-menu button span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.strategix-nav .language-menu button small {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* PROJECT BUTTON */
 
 .strategix-nav .nav-project {
   display: inline-flex;
@@ -1117,7 +1403,14 @@ button {
     gap: 8px;
   }
 
-  .strategix-nav .strategix-nav .nav-project {
+  .strategix-nav .language-button {
+    min-width: 52px;
+    height: 38px;
+
+    padding: 0 10px;
+  }
+
+  .strategix-nav .nav-project {
     min-height: 38px;
 
     padding: 0 12px;
@@ -2308,9 +2601,106 @@ button {
 
 /* LANGUAGE */
 
-.strategix-nav .strategix-nav .strategix-nav /* LANGUAGE MENU */
+.strategix-nav .language-selector {
+  position: relative;
+}
 
-.strategix-nav .strategix-nav .strategix-nav .strategix-nav /* CTA */
+.strategix-nav .language-button {
+  min-width: 58px;
+  height: 40px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.strategix-nav .language-button:hover {
+  border-color: rgba(167, 108, 255, 0.55);
+  background: rgba(167, 108, 255, 0.06);
+}
+
+.strategix-nav .language-button span {
+  color: #8f8995;
+  font-size: 13px;
+}
+
+/* LANGUAGE MENU */
+
+.strategix-nav .language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 155px;
+
+  padding: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  background: rgba(17, 14, 24, 0.97);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.strategix-nav .language-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 11px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  cursor: pointer;
+}
+
+.strategix-nav .language-menu button:hover,
+.strategix-nav .language-menu button.active {
+  color: #fff;
+  background: rgba(167, 108, 255, 0.12);
+}
+
+.strategix-nav .language-menu button span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.strategix-nav .language-menu button small {
+  font-size: 10px;
+  color: #8f8995;
+}
+
+/* CTA */
 
 .strategix-nav .nav-project {
   min-height: 40px;
@@ -2405,7 +2795,13 @@ button {
     gap: 7px;
   }
 
-  .strategix-nav .strategix-nav .nav-project {
+  .strategix-nav .language-button {
+    min-width: 51px;
+    height: 37px;
+    padding: 0 9px;
+  }
+
+  .strategix-nav .nav-project {
     min-height: 37px;
     padding: 0 11px;
     font-size: 10px;
@@ -2581,239 +2977,4 @@ button {
   .need-card:hover {
     transform: translateY(-3px);
   }
-}
-/* =========================================================
-   STRATEGIX — LANGUAGE SELECTOR FINAL
-   Desktop + Mobile / Touch
-   ========================================================= */
-
-.strategix-nav .strategix-nav .strategix-nav .language-button:active {
-  transform: scale(0.97);
-}
-
-.strategix-nav /* DROPDOWN */
-
-.strategix-nav .strategix-nav .strategix-nav .language-menu button:active {
-  background: rgba(167, 108, 255, 0.2);
-}
-
-.strategix-nav .strategix-nav /* MOBILE */
-
-@media (max-width: 768px) {
-
-  .strategix-nav {
-    position: relative;
-    z-index: 1000;
-    overflow: visible;
-  }
-
-  .strategix-nav .nav-right,
-  .strategix-nav .nav-actions {
-    position: relative;
-    z-index: 1000;
-    overflow: visible;
-  }
-
-  .strategix-nav .strategix-nav }
-
-
-/* =========================================================
-   STRATEGIX — LANGUAGE SELECTOR
-   SINGLE IMPLEMENTATION
-   DESKTOP + MOBILE
-   ========================================================= */
-
-.strategix-nav .language-selector {
-  position: relative;
-  z-index: 10000;
-  flex-shrink: 0;
-}
-
-.strategix-nav .language-button {
-  position: relative;
-  z-index: 10001;
-
-  min-width: 58px;
-  height: 40px;
-
-  padding: 0 12px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 11px;
-
-  background: rgba(255,255,255,.035);
-  color: #fff;
-
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .08em;
-
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-
-  transition:
-    border-color .18s ease,
-    background .18s ease,
-    transform .18s ease;
-}
-
-.strategix-nav .language-button:hover,
-.strategix-nav .language-button.is-open {
-  border-color: rgba(167,108,255,.6);
-  background: rgba(167,108,255,.07);
-}
-
-.strategix-nav .language-button:active {
-  transform: scale(.97);
-}
-
-.strategix-nav .language-chevron {
-  color: #8f8995;
-  font-size: 13px;
-  line-height: 1;
-}
-
-
-/* =========================================================
-   DESKTOP DROPDOWN
-   ========================================================= */
-
-.strategix-nav .language-menu {
-  position: absolute;
-
-  top: calc(100% + 9px);
-  right: 0;
-
-  z-index: 99999;
-
-  width: 155px;
-
-  padding: 6px;
-
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 14px;
-
-  background: rgba(17,14,24,.98);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.42),
-    0 0 0 1px rgba(167,108,255,.03);
-
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  overflow: hidden;
-}
-
-.strategix-nav .language-menu button {
-  width: 100%;
-  min-height: 40px;
-
-  padding: 10px 11px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border: 0;
-  border-radius: 9px;
-
-  background: transparent;
-
-  color: rgba(255,255,255,.72);
-
-  font-family: inherit;
-  font-size: 11px;
-
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-
-  transition:
-    background .18s ease,
-    color .18s ease;
-}
-
-.strategix-nav .language-menu button:hover,
-.strategix-nav .language-menu button.active {
-  background: rgba(167,108,255,.13);
-  color: #fff;
-}
-
-.strategix-nav .language-menu button:active {
-  background: rgba(167,108,255,.22);
-}
-
-.strategix-nav .language-menu button span {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-.strategix-nav .language-menu button small {
-  color: #8f8995;
-  font-size: 10px;
-}
-
-
-/* =========================================================
-   MOBILE
-   El menú sale del flujo del navbar.
-   Esto evita problemas de stacking/overflow/touch.
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .strategix-nav {
-    position: relative;
-    z-index: 10000;
-    overflow: visible !important;
-  }
-
-  .strategix-nav .nav-right,
-  .strategix-nav .nav-actions,
-  .strategix-nav .language-selector {
-    position: relative;
-    z-index: 10000;
-    overflow: visible !important;
-  }
-
-  .strategix-nav .language-menu {
-    position: fixed;
-
-    top: 76px;
-    right: 16px;
-
-    z-index: 2147483647;
-
-    width: 160px;
-
-    margin: 0;
-
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-
-    box-shadow:
-      0 24px 60px rgba(0,0,0,.55),
-      0 0 0 1px rgba(167,108,255,.08);
-  }
-}
-
-@media (max-width: 420px) {
-
-  .strategix-nav .language-menu {
-    top: 70px;
-    right: 12px;
-    width: 154px;
-  }
-
 }

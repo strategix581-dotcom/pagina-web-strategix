@@ -1,0 +1,171 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
+const translations = {
+  EN: {
+    label: "CREATIVE MARKETING AGENCY · CURAÇAO",
+    status: "AVAILABLE FOR PROJECTS",
+    title1: "Your business",
+    title2: "deserves to be",
+    title3: "noticed.",
+    intro:
+      "Marketing shouldn't be complicated. Tell us what your business needs and we'll help you find the right solution.",
+    scroll: "SCROLL TO EXPLORE",
+    start: "START HERE",
+    question: "What does your business need?",
+    bottom: "FOOD · BEAUTY · HOSPITALITY",
+    needs: [
+      ["01", "I need more customers", "More people discovering and choosing my business."],
+      ["02", "I need better content", "Professional photos, videos and Reels that stand out."],
+      ["03", "I need help with social media", "Someone to take care of my social presence."],
+      ["04", "I want to advertise", "Reach the right people through Facebook and Instagram."],
+      ["05", "I need a website", "A professional online presence for my business."],
+      ["06", "I want online bookings", "Make it easier for customers to book with me."],
+    ],
+  },
+
+  ES: {
+    label: "AGENCIA DE MARKETING CREATIVO · CURAÇAO",
+    status: "DISPONIBLES PARA PROYECTOS",
+    title1: "Tu negocio",
+    title2: "merece ser",
+    title3: "notado.",
+    intro:
+      "El marketing no tiene por qué ser complicado. Cuéntanos qué necesita tu negocio y te ayudaremos a encontrar la solución adecuada.",
+    scroll: "EXPLORA",
+    start: "EMPIEZA AQUÍ",
+    question: "¿Qué necesita tu negocio?",
+    bottom: "COMIDA · BEAUTY · HOSPITALIDAD",
+    needs: [
+      ["01", "Necesito más clientes", "Quiero que más personas descubran y elijan mi negocio."],
+      ["02", "Necesito mejor contenido", "Fotos, videos y Reels profesionales que destaquen."],
+      ["03", "Necesito ayuda con mis redes", "Alguien que se encargue de mi presencia en redes sociales."],
+      ["04", "Quiero hacer publicidad", "Llegar a las personas correctas en Facebook e Instagram."],
+      ["05", "Necesito una página web", "Una presencia online profesional para mi negocio."],
+      ["06", "Quiero recibir reservas online", "Facilitar que mis clientes puedan reservar conmigo."],
+    ],
+  },
+
+  PAP: {
+    label: "AGENSIA DI MARKETING KREATIVO · KÒRSOU",
+    status: "DISPONÍ PA PROYEKTONAN",
+    title1: "Bo negoshi",
+    title2: "meresé pa",
+    title3: "wordó.",
+    intro:
+      "Marketing no mester ta kompliká. Konta nos kiko bo negoshi tin mester i nos lo yuda bo haña e solushon ku ta bon pa bo.",
+    scroll: "MIRA MAS",
+    start: "KUMINSÁ AKÍ",
+    question: "Kiko bo negoshi tin mester?",
+    bottom: "KOMIDA · BEAUTY · HOSPITALIDAT",
+    needs: [
+      ["01", "Mi tin mester di mas kliente", "Mas hende ku ta deskubrí i skohe pa bo negoshi."],
+      ["02", "Mi tin mester di mihó kontenido", "Foto, video i Reels profesional ku ta destaká."],
+      ["03", "Mi tin mester di yudansa ku social media", "Alguén ku ta kuida bo presensia online."],
+      ["04", "Mi ke hasi propaganda", "Alkansá e personanan korekto riba Facebook i Instagram."],
+      ["05", "Mi tin mester di un website", "Un presensia profesional online pa bo negoshi."],
+      ["06", "Mi ke risibí reservashonnan online", "Hasi e proseso pa bo klientenan reserva mas fásil."],
+    ],
+  },
+}
+
+export default function Hero() {
+  const [language, setLanguage] = useState("EN")
+
+  useEffect(() => {
+    const saved = localStorage.getItem("strategix-language")
+    if (saved === "EN" || saved === "ES" || saved === "PAP") {
+      setLanguage(saved)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("strategix-language", {
+      detail: language
+    }))
+    localStorage.setItem("strategix-language", language)
+  }, [language])
+
+  const t = translations[language as keyof typeof translations]
+
+  return (
+    <section className="hero-new">
+
+      <div className="hero-new-glow" />
+
+      <div className="hero-new-top">
+        <div className="hero-new-label">{t.label}</div>
+
+        <div className="hero-new-status">
+          <span />
+          {t.status}
+        </div>
+      </div>
+
+      <div className="hero-new-heading">
+        <div>
+          <h1>
+            {t.title1}
+            <br />
+            {t.title2}
+            <br />
+            <span>{t.title3}</span>
+          </h1>
+        </div>
+
+        <div className="hero-new-intro">
+          <p>{t.intro}</p>
+
+          <div className="hero-new-scroll">
+            <span>{t.scroll}</span>
+            <div className="scroll-line" />
+          </div>
+        </div>
+      </div>
+
+      <div className="needs-wrapper">
+
+        <div className="needs-heading">
+          <span>{t.start}</span>
+          <h2>{t.question}</h2>
+        </div>
+
+        <div className="needs-grid">
+          {t.needs.map((need) => (
+            <button className="need-card" key={need[0]}>
+              <div className="need-top">
+                <span>{need[0]}</span>
+                <span className="need-arrow">↗</span>
+              </div>
+
+              <div className="need-content">
+                <h3>{need[1]}</h3>
+                <p>{need[2]}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+      </div>
+
+      <div className="hero-bottom">
+        <span>{t.bottom}</span>
+        <span>STRATEGIX®</span>
+      </div>
+
+      <div className="language-controls">
+        {(["ES", "EN", "PAP"] as const).map((lang) => (
+          <button
+            key={lang}
+            className={language === lang ? "selected" : ""}
+            onClick={() => setLanguage(lang)}
+          >
+            {lang}
+          </button>
+        ))}
+      </div>
+
+    </section>
+  )
+}
