@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useRef, useState } from "react"
 
 export type Language = "ES" | "EN" | "PAP"
 
@@ -17,18 +17,44 @@ export function LanguageProvider({
   children: React.ReactNode
 }) {
   const [language, setLanguageState] = useState<Language>("EN")
+  const restoreFrameRef = useRef<number | null>(null)
 
   useEffect(() => {
-    const saved = localStorage.getItem("strategix-language")
+    let saved: string | null = null
 
-    if (saved === "ES" || saved === "EN" || saved === "PAP") {
+    try {
+      saved = localStorage.getItem("strategix-language")
+    } catch {
+      return
+    }
+
+    if (saved !== "ES" && saved !== "EN" && saved !== "PAP") return
+
+    restoreFrameRef.current = requestAnimationFrame(() => {
+      restoreFrameRef.current = null
       setLanguageState(saved)
+    })
+
+    return () => {
+      if (restoreFrameRef.current !== null) {
+        cancelAnimationFrame(restoreFrameRef.current)
+      }
     }
   }, [])
 
   const setLanguage = (nextLanguage: Language) => {
+    if (restoreFrameRef.current !== null) {
+      cancelAnimationFrame(restoreFrameRef.current)
+      restoreFrameRef.current = null
+    }
+
     setLanguageState(nextLanguage)
-    localStorage.setItem("strategix-language", nextLanguage)
+
+    try {
+      localStorage.setItem("strategix-language", nextLanguage)
+    } catch {
+      // The language still changes when storage is unavailable.
+    }
   }
 
   useEffect(() => {

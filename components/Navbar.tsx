@@ -190,13 +190,21 @@ export default function Navbar() {
                         ? "active"
                         : ""
                     }
+                    onPointerDown={(event) => {
+                      event.preventDefault()
+                      event.stopPropagation()
+
+                      handleLanguageClick(lang.code)
+                    }}
                     onClick={(event) => {
                       event.preventDefault()
                       event.stopPropagation()
 
-                      handleLanguageClick(
-                        lang.code
-                      )
+                      // Pointer interactions are handled earlier so mobile
+                      // browsers apply the language before closing the menu.
+                      if (event.detail === 0) {
+                        handleLanguageClick(lang.code)
+                      }
                     }}
                   >
 

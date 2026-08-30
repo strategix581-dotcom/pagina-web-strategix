@@ -878,7 +878,7 @@ button {
     gap: 8px;
   }
 
-  .strategix-nav .strategix-nav .nav-project {
+  .strategix-nav .nav-project {
     min-height: 38px;
 
     padding: 0 12px;
@@ -2583,41 +2583,6 @@ button {
   }
 }
 /* =========================================================
-   STRATEGIX — LANGUAGE SELECTOR FINAL
-   Desktop + Mobile / Touch
-   ========================================================= */
-
-.strategix-nav .strategix-nav .strategix-nav .language-button:active {
-  transform: scale(0.97);
-}
-
-.strategix-nav /* DROPDOWN */
-
-.strategix-nav .strategix-nav .strategix-nav .language-menu button:active {
-  background: rgba(167, 108, 255, 0.2);
-}
-
-.strategix-nav .strategix-nav /* MOBILE */
-
-@media (max-width: 768px) {
-
-  .strategix-nav {
-    position: relative;
-    z-index: 1000;
-    overflow: visible;
-  }
-
-  .strategix-nav .nav-right,
-  .strategix-nav .nav-actions {
-    position: relative;
-    z-index: 1000;
-    overflow: visible;
-  }
-
-  .strategix-nav .strategix-nav }
-
-
-/* =========================================================
    STRATEGIX — LANGUAGE SELECTOR
    SINGLE IMPLEMENTATION
    DESKTOP + MOBILE
@@ -2805,6 +2770,11 @@ button {
     box-shadow:
       0 24px 60px rgba(0,0,0,.55),
       0 0 0 1px rgba(167,108,255,.08);
+  }
+
+  .strategix-nav .language-button,
+  .strategix-nav .language-menu button {
+    min-height: 44px;
   }
 }
 
