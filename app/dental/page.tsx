@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import IndustryPage from "@/components/industries/IndustryPage"
 
 export const metadata = {
+  alternates: { canonical: "/dental" },
   title: "Dental Marketing Curaçao | Strategix",
   description:
     "Dental marketing, photography, video, social media, advertising and appointment systems for dental clinics in Curaçao.",

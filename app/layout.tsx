@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://strategixcuracao.com"),
   title: "Strategix | Marketing, contenido y soluciones digitales en Curaçao",
   description:
     "Contenido, redes sociales, diseño web, reservas y automatizaciones para negocios en Curaçao. Paquetes mensuales con precios claros y proyectos a medida.",
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     "website design Curaçao",
     "online bookings Curaçao",
   ],
+  alternates: { canonical: "/" },
 }
 
 export default function RootLayout({

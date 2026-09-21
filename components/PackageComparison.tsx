@@ -56,6 +56,7 @@ const content = {
     sessions: { "1": "1 sesión de contenido al mes", "up-to-2": "Hasta 2 sesiones de contenido", "up-to-3": "Hasta 3 sesiones de contenido" },
     management: "Manejo de Instagram + Facebook",
     cta: "Consultar paquete",
+    sectorDetails: "Ver servicios para este sector",
     note: "El presupuesto publicitario se paga aparte. Contenido adicional y producciones especiales se cotizan por separado.",
   },
   EN: {
@@ -76,6 +77,7 @@ const content = {
     sessions: { "1": "1 content session per month", "up-to-2": "Up to 2 content sessions", "up-to-3": "Up to 3 content sessions" },
     management: "Instagram + Facebook management",
     cta: "Ask about this package",
+    sectorDetails: "See services for this industry",
     note: "Ad spend is separate. Extra content and special productions are quoted separately.",
   },
   PAP: {
@@ -96,6 +98,7 @@ const content = {
     sessions: { "1": "1 seshon di kontenido pa luna", "up-to-2": "Te ku 2 seshon di kontenido", "up-to-3": "Te ku 3 seshon di kontenido" },
     management: "Maneho di Instagram + Facebook",
     cta: "Pidi informashon di pakete",
+    sectorDetails: "Mira servisionan pa e sektór aki",
     note: "Presupuesto di anunsio ta aparte. Kontenido adishonal i produkshon spesial ta risibí kotisashon aparte.",
   },
 } as const
@@ -112,6 +115,7 @@ export default function PackageComparison({ language }: { language: Language }) 
       {(Object.keys(t.sectors) as Sector[]).map(key => <button key={key} type="button" className={sector === key ? "active" : ""} aria-pressed={sector === key} onClick={() => setSector(key)}>{t.sectors[key]}</button>)}
     </div>
     <p className="sector-intro">{t.intros[sector]}</p>
+    {sector !== "nails" && <a className="sector-detail-link" href={sector === "food" ? "/restaurants" : "/beauty"}>{t.sectorDetails} →</a>}
     <div className="package-grid">
       {plans.map(plan => {
         const name = t.names[plan.name as keyof typeof t.names]

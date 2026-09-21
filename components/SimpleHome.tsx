@@ -14,6 +14,7 @@ const copy = {
     talk: "Hablar por WhatsApp",
     servicesLabel: "ELIGE LO QUE NECESITAS",
     serviceCta: "Consultar servicio",
+    serviceDetails: "Ver detalles",
     servicesTitle: "Todo claro desde el principio.",
     servicesIntro: "Elige lo que necesitas. Podemos trabajar por servicio, con un paquete mensual o con una solución personalizada.",
     services: [
@@ -50,6 +51,7 @@ const copy = {
     talk: "Chat on WhatsApp",
     servicesLabel: "CHOOSE WHAT YOU NEED",
     serviceCta: "Ask about this service",
+    serviceDetails: "See details",
     servicesTitle: "Clear from the start.",
     servicesIntro: "Choose what you need: a single service, a monthly package or a custom solution.",
     services: [
@@ -86,6 +88,7 @@ const copy = {
     talk: "Papía via WhatsApp",
     servicesLabel: "SKOHE LOKE BO TIN MESTER",
     serviceCta: "Pidi informashon",
+    serviceDetails: "Mira detayenan",
     servicesTitle: "Tur kos kla for di kuminsamentu.",
     servicesIntro: "Skohe loke bo tin mester: un servisio, un pakete mensual òf un solushon personalisá.",
     services: [
@@ -116,13 +119,19 @@ const copy = {
   },
 } satisfies Record<Language, {
   kicker: string; title: string; intro: string; seePrices: string; talk: string;
-  servicesLabel: string; serviceCta: string; servicesTitle: string; servicesIntro: string; services: string[][];
+  servicesLabel: string; serviceCta: string; serviceDetails: string; servicesTitle: string; servicesIntro: string; services: string[][];
   packagesLabel: string; packagesTitle: string; packagesIntro: string; month: string; packages: string[][];
   packageNote: string; customLabel: string; customTitle: string; customBody: string;
   customPrice: string; customCta: string; contactLabel: string; contactTitle: string; contactBody: string;
 }>
 
 const whatsapp = "https://wa.me/59996931075"
+const servicePaths = [
+  "/needs/better-content",
+  "/needs/social-media",
+  "/needs/website",
+  "/needs/online-bookings",
+]
 
 export default function SimpleHome() {
   const { language } = useLanguage()
@@ -151,7 +160,10 @@ export default function SimpleHome() {
               <h3>{title}</h3>
               <p>{description}</p>
               <strong className="service-price">{price}</strong>
-              <a className="service-link" href={`${whatsapp}?text=${encodeURIComponent(`Hola, quiero saber más sobre ${title} de Strategix.`)}`} target="_blank" rel="noopener noreferrer">{t.serviceCta} ↗</a>
+              <div className="service-links">
+                <a className="service-detail-link" href={servicePaths[index]}>{t.serviceDetails} →</a>
+                <a className="service-link" href={`${whatsapp}?text=${encodeURIComponent(`Hola, quiero saber más sobre ${title} de Strategix.`)}`} target="_blank" rel="noopener noreferrer">{t.serviceCta} ↗</a>
+              </div>
             </article>
           ))}
         </div>

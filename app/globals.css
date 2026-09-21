@@ -3019,6 +3019,12 @@ button {
 .simple-home .service-card { display: flex; flex-direction: column; }
 .simple-home .service-link { margin-top: auto; padding-top: 18px; color: #d6bdff; font-size: 13px; font-weight: 700; }
 .simple-home .service-link:hover { text-decoration: underline; }
+.simple-home .service-links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: auto; padding-top: 18px; }
+.simple-home .service-links a { padding-top: 0; font-size: 13px; font-weight: 700; }
+.simple-home .service-detail-link { color: #fff; }
+.simple-home .service-detail-link:hover { text-decoration: underline; }
+.simple-home .sector-detail-link { display: inline-block; margin: 0 0 22px; color: #d6bdff; font-size: 13px; font-weight: 700; }
+.simple-home .sector-detail-link:hover { text-decoration: underline; }
 .simple-home .simple-hero { min-height: 510px; padding-block: 72px 86px; }
 
 .sector-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
