@@ -337,38 +337,46 @@ const portfolioText: Record<
     label: string
     title: string
     intro: string
-    categories: string[]
-    soon: string
-    open: string
   }
 > = {
   EN: {
     label: "SELECTED WORK",
     title: "See what we create for businesses like yours.",
-    intro:
-      "This space is ready for approved Strategix photography, video, Reels and campaign work.",
-    categories: ["Photography", "Video & Reels", "Campaigns"],
-    soon: "Content coming soon",
-    open: "View examples",
+    intro: "Photography, video and campaigns created for our clients.",
   },
   ES: {
     label: "TRABAJO SELECCIONADO",
     title: "Descubre lo que creamos para negocios como el tuyo.",
-    intro:
-      "Este espacio está preparado para fotografías, videos, Reels y campañas aprobadas de Strategix.",
-    categories: ["Fotografía", "Video y Reels", "Campañas"],
-    soon: "Contenido próximamente",
-    open: "Ver ejemplos",
+    intro: "Fotografías, videos y campañas creadas para nuestros clientes.",
   },
   PAP: {
     label: "TRABOU SELEKTÁ",
     title: "Mira kiko nos ta krea pa negoshi manera di bo.",
-    intro:
-      "E espasio aki ta kla pa fotografia, video, Reels i kampaña aprobá di Strategix.",
-    categories: ["Fotografia", "Video i Reels", "Kampaña"],
-    soon: "Kontenido ta bin pronto",
-    open: "Mira ehèmpel",
+    intro: "Fotografia, video i kampaña krea pa nos klientenan.",
   },
+}
+
+const serviceRoutes: Record<IndustryKey, string[]> = {
+  restaurants: [
+    "/needs/better-content", "/needs/better-content", "/needs/better-content",
+    "/needs/social-media", "/needs/advertising", "/needs/website",
+    "/needs/online-bookings",
+  ],
+  beauty: [
+    "/needs/better-content", "/needs/better-content", "/needs/social-media",
+    "/needs/advertising", "/needs/social-media", "/needs/website",
+    "/needs/online-bookings",
+  ],
+  clinics: [
+    "/needs/better-content", "/needs/better-content", "/needs/social-media",
+    "/needs/advertising", "/needs/website", "/needs/better-content",
+    "/needs/online-bookings",
+  ],
+  dental: [
+    "/needs/better-content", "/needs/better-content", "/needs/better-content",
+    "/needs/social-media", "/needs/advertising", "/needs/website",
+    "/needs/online-bookings",
+  ],
 }
 
 export default function IndustryPage({
@@ -425,11 +433,10 @@ export default function IndustryPage({
 
             <div className="industry-service-list">
               {t.services.map((service, index) => (
-                <a
-                  href="#industry-work"
+                <Link
+                  href={serviceRoutes[industry][index]}
                   className="industry-service"
                   key={service}
-                  aria-label={`${portfolio.open}: ${service}`}
                 >
                   <span>
                     {String(index + 1).padStart(2, "0")}
@@ -438,13 +445,13 @@ export default function IndustryPage({
                   <strong>{service}</strong>
 
                   <span>↗</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="industry-work" id="industry-work">
+        {portfolioItems.length > 0 && <section className="industry-work" id="industry-work">
           <div className="industry-section-number">03</div>
 
           <div>
@@ -452,7 +459,6 @@ export default function IndustryPage({
             <h2>{portfolio.title}</h2>
             <p className="industry-work-intro">{portfolio.intro}</p>
 
-            {portfolioItems.length > 0 ? (
               <div className="industry-work-grid">
                 {portfolioItems.map((item) => (
                   <article className="industry-work-card" key={item.src}>
@@ -478,26 +484,12 @@ export default function IndustryPage({
                   </article>
                 ))}
               </div>
-            ) : (
-              <div className="industry-work-grid">
-                {portfolio.categories.map((category, index) => (
-                  <article
-                    className="industry-work-placeholder"
-                    key={category}
-                  >
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{category}</strong>
-                    <small>{portfolio.soon}</small>
-                  </article>
-                ))}
-              </div>
-            )}
           </div>
-        </section>
+        </section>}
 
         <section className="industry-cta">
           <span className="industry-label">
-            04 / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
+            {portfolioItems.length > 0 ? "04" : "03"} / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
           </span>
 
           <h2>{t.ctaTitle}</h2>
