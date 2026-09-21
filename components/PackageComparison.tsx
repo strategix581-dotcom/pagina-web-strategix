@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import type { Language } from "@/components/LanguageProvider"
 
 type Sector = "food" | "beauty" | "nails"
@@ -107,6 +107,13 @@ const whatsapp = "https://wa.me/59996931075"
 
 export default function PackageComparison({ language }: { language: Language }) {
   const [sector, setSector] = useState<Sector>("food")
+
+  useEffect(() => {
+    const requestedSector = new URLSearchParams(window.location.search).get("sector")
+    if (requestedSector === "food" || requestedSector === "beauty" || requestedSector === "nails") {
+      setSector(requestedSector)
+    }
+  }, [])
   const t = content[language]
   const plans = sectorPlans[sector]
 

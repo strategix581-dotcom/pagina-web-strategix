@@ -379,6 +379,140 @@ const serviceRoutes: Record<IndustryKey, string[]> = {
   ],
 }
 
+type IndustryQuestion = {
+  question: string
+  answer: string
+  link: string
+  href: string
+}
+
+const questions: Record<"restaurants" | "beauty", Record<Language, IndustryQuestion[]>> = {
+  restaurants: {
+    ES: [
+      {
+        question: "¿Cuánto cuesta crear contenido para un restaurante en Curaçao?",
+        answer: "El paquete Esencial cuesta 900 XCG al mes e incluye 4 Reels básicos, 15 fotos profesionales, 1 diseño promocional, 3 historias por semana, manejo de Instagram y Facebook y 1 sesión de contenido al mes. Hay otros paquetes según la cantidad y el tipo de contenido que necesites.",
+        link: "Comparar paquetes para restaurantes",
+        href: "/?sector=food#packages",
+      },
+      {
+        question: "¿La publicidad de Meta está incluida en el precio?",
+        answer: "El paquete Esencial ofrece una campaña de Meta Ads opcional; los paquetes Pro y Premium incluyen campañas. El dinero que se invierte en los anuncios se paga aparte del paquete.",
+        link: "Ver opciones de publicidad",
+        href: "/needs/advertising",
+      },
+      {
+        question: "¿También pueden crear una web con reservas para mi restaurante?",
+        answer: "Sí. Podemos diseñar una web que muestre tu menú y facilite las reservas. La web y el sistema de reservas se presupuestan según las funciones necesarias; el rango de referencia para web con reservas es de 2.500 a 3.500 XCG.",
+        link: "Cómo funcionan las reservas online",
+        href: "/needs/online-bookings",
+      },
+    ],
+    EN: [
+      {
+        question: "How much does restaurant content cost in Curaçao?",
+        answer: "The Essential package costs XCG 900 per month and includes 4 basic Reels, 15 professional photos, 1 promotional design, 3 stories per week, Instagram and Facebook management, and 1 monthly content session. Other packages cover different content needs.",
+        link: "Compare restaurant packages",
+        href: "/?sector=food#packages",
+      },
+      {
+        question: "Is Meta advertising included in the package price?",
+        answer: "An optional Meta Ads campaign is available with Essential; Pro and Premium include campaigns. The amount spent on ads is paid separately.",
+        link: "Explore advertising",
+        href: "/needs/advertising",
+      },
+      {
+        question: "Can you build a restaurant website with reservations?",
+        answer: "Yes. We can create a site that presents your menu and makes it easier to book. Website and booking features depend on your needs; a website with bookings has a reference range of XCG 2,500–3,500.",
+        link: "Explore online bookings",
+        href: "/needs/online-bookings",
+      },
+    ],
+    PAP: [
+      {
+        question: "Kuantu kontenido pa un restorant na Kòrsou ta kosta?",
+        answer: "E pakete Esencial ta kosta 900 XCG pa luna i ta inkluí 4 Reel básiko, 15 potrèt profesional, 1 diseño promosional, 3 story pa siman, maneho di Instagram i Facebook i 1 seshon di kontenido pa luna. Tin otro pakete segun kuantu kontenido bo mester.",
+        link: "Kompará paketnan pa restorant",
+        href: "/?sector=food#packages",
+      },
+      {
+        question: "E preis ta inkluí anunsionan di Meta?",
+        answer: "Esencial tin un kampaña di Meta Ads opshonal; Pro i Premium ta inkluí kampañanan. E presupuesto pa paga e anunsionan ta aparte.",
+        link: "Mira opshonnan di anunsio",
+        href: "/needs/advertising",
+      },
+      {
+        question: "Boso por traha un website ku reservashon pa mi restorant?",
+        answer: "Sí. Nos por traha un website pa mustra bo menú i fasilitá reservashon. E funshonnan ta dependé di bo nesesidat; un website ku reservashon tin un rango di referensia di 2.500–3.500 XCG.",
+        link: "Mira reservashon online",
+        href: "/needs/online-bookings",
+      },
+    ],
+  },
+  beauty: {
+    ES: [
+      {
+        question: "¿Cuánto cuesta el contenido para un salón de belleza en Curaçao?",
+        answer: "El paquete Esencial cuesta 900 XCG al mes e incluye 4 Reels básicos, 5 fotos profesionales, 4 diseños promocionales, 3 historias por semana, manejo de Instagram y Facebook y 1 sesión de contenido al mes. También hay paquetes para salones de uñas con entregables diferentes.",
+        link: "Comparar paquetes de belleza y uñas",
+        href: "/?sector=beauty#packages",
+      },
+      {
+        question: "¿Pueden ayudarme a recibir citas sin responder cada mensaje a mano?",
+        answer: "Sí. Podemos crear una web con un proceso de reservas adaptado a tus servicios y horarios. El rango de referencia para web con reservas es de 2.500 a 3.500 XCG; las funciones concretas se definen antes de darte el precio final.",
+        link: "Ver sistemas de reservas",
+        href: "/needs/online-bookings",
+      },
+      {
+        question: "¿El paquete incluye anuncios para conseguir reservas?",
+        answer: "En Esencial, una campaña de Meta Ads es opcional. Pro incluye una campaña y Premium hasta dos. El presupuesto que se paga a Meta por mostrar los anuncios es aparte.",
+        link: "Ver opciones de publicidad",
+        href: "/needs/advertising",
+      },
+    ],
+    EN: [
+      {
+        question: "How much does content for a beauty salon cost in Curaçao?",
+        answer: "The Essential package costs XCG 900 per month and includes 4 basic Reels, 5 professional photos, 4 promotional designs, 3 stories per week, Instagram and Facebook management, and 1 monthly content session. Nail salons have separate package details.",
+        link: "Compare beauty and nail packages",
+        href: "/?sector=beauty#packages",
+      },
+      {
+        question: "Can clients book without sending me a message?",
+        answer: "Yes. We can build a website with a booking process adapted to your services and schedule. The reference range for a website with bookings is XCG 2,500–3,500; the final price depends on the features you need.",
+        link: "Explore booking systems",
+        href: "/needs/online-bookings",
+      },
+      {
+        question: "Does the package include ads for more bookings?",
+        answer: "A Meta Ads campaign is optional with Essential. Pro includes one campaign and Premium up to two. Ad spend paid to Meta is separate.",
+        link: "Explore advertising",
+        href: "/needs/advertising",
+      },
+    ],
+    PAP: [
+      {
+        question: "Kuantu kontenido pa un salon di belleza na Kòrsou ta kosta?",
+        answer: "E pakete Esencial ta kosta 900 XCG pa luna i ta inkluí 4 Reel básiko, 5 potrèt profesional, 4 diseño promosional, 3 story pa siman, maneho di Instagram i Facebook i 1 seshon di kontenido pa luna. Salon di uña tin paketnan ku otro entregabelnan.",
+        link: "Kompará paketnan di belleza i uña",
+        href: "/?sector=beauty#packages",
+      },
+      {
+        question: "Mi klientenan por reserva sin manda mi un mensahe?",
+        answer: "Sí. Nos por traha un website ku un proseso di reservashon adaptá na bo servisionan i orario. E rango di referensia pa website ku reservashon ta 2.500–3.500 XCG; e preis final ta dependé di e funshonnan nesesario.",
+        link: "Mira sistemanan di reservashon",
+        href: "/needs/online-bookings",
+      },
+      {
+        question: "E pakete ta inkluí anunsionan pa haña reservashon?",
+        answer: "Den Esencial, un kampaña di Meta Ads ta opshonal. Pro ta inkluí un kampaña i Premium te ku dos. E presupuesto pa paga Meta ta aparte.",
+        link: "Mira opshonnan di anunsio",
+        href: "/needs/advertising",
+      },
+    ],
+  },
+}
+
 export default function IndustryPage({
   industry,
 }: {
@@ -388,6 +522,9 @@ export default function IndustryPage({
   const t = content[industry][language]
   const portfolio = portfolioText[language]
   const portfolioItems = industryPortfolio[industry]
+  const sectorQuestions = industry === "restaurants" || industry === "beauty"
+    ? questions[industry][language]
+    : null
 
   return (
     <main className="industry-page">
@@ -404,7 +541,7 @@ export default function IndustryPage({
           <h1>{t.title}</h1>
 
           <p className="industry-intro">{t.intro}</p>
-          {t.priceNote && <Link href="/#packages" className="industry-price-link">{t.priceNote} →</Link>}
+          {t.priceNote && <Link href={industry === "beauty" ? "/?sector=beauty#packages" : "/?sector=food#packages"} className="industry-price-link">{t.priceNote} →</Link>}
         </div>
 
         <section className="industry-problem">
@@ -487,9 +624,32 @@ export default function IndustryPage({
           </div>
         </section>}
 
+        {sectorQuestions && (
+          <section className="industry-questions" aria-labelledby="industry-questions-title">
+            <div className="industry-section-number">{portfolioItems.length > 0 ? "04" : "03"}</div>
+            <div>
+              <span className="industry-label">
+                {language === "ES" ? "PREGUNTAS FRECUENTES" : language === "PAP" ? "PREGUNTANAN FREKUENTE" : "COMMON QUESTIONS"}
+              </span>
+              <h2 id="industry-questions-title">
+                {language === "ES" ? "Precios y respuestas claras antes de empezar." : language === "PAP" ? "Preisnan i kontesta kla promé ku kuminsá." : "Clear answers before you begin."}
+              </h2>
+              <div className="industry-question-list">
+                {sectorQuestions.map(({ question, answer, link, href }) => (
+                  <article className="industry-question" key={question}>
+                    <h3>{question}</h3>
+                    <p>{answer}</p>
+                    <Link href={href}>{link} ↗</Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="industry-cta">
           <span className="industry-label">
-            {portfolioItems.length > 0 ? "04" : "03"} / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
+            {String(3 + Number(portfolioItems.length > 0) + Number(Boolean(sectorQuestions))).padStart(2, "0")} / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
           </span>
 
           <h2>{t.ctaTitle}</h2>
