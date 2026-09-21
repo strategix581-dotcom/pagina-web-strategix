@@ -3,9 +3,9 @@ import NeedPage from "@/components/needs/NeedPage"
 
 export const metadata = {
   alternates: { canonical: "/needs/website" },
-  title: "Website Design Curaçao | Strategix",
+  title: "Diseño de páginas web en Curaçao | Strategix",
   description:
-    "Strategic website design and development for restaurants, beauty businesses, clinics and local businesses in Curaçao.",
+    "¿Tus clientes no encuentran una explicación clara de tus servicios y precios? Diseñamos webs fáciles de usar en Curaçao. Landing desde 1.000 XCG.",
 }
 
 export default function WebsitePage() {

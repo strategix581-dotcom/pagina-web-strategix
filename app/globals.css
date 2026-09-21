@@ -1303,6 +1303,17 @@ button {
   line-height: 1.75;
 }
 
+.industry-price-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: #d6bdff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.industry-price-link:hover { text-decoration: underline; }
+
 .industry-problem,
 .industry-services,
 .industry-work {
@@ -1709,6 +1720,16 @@ button {
   line-height: 1.75;
 }
 
+.need-page-intro .need-price {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.14);
+  color: #d6bdff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 /* =========================================================
    BENEFITS
    ========================================================= */
@@ -1811,18 +1832,6 @@ button {
     transform .25s ease,
     border-color .25s ease,
     background .25s ease;
-}
-
-.need-work-card:hover {
-  transform: translateY(-7px);
-  border-color: rgba(167,108,255,.50);
-  background:
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(143,85,255,.20),
-      transparent 45%
-    ),
-    rgba(255,255,255,.04);
 }
 
 .need-work-card-large {

@@ -3,9 +3,9 @@ import IndustryPage from "@/components/industries/IndustryPage"
 
 export const metadata = {
   alternates: { canonical: "/restaurants" },
-  title: "Restaurant Marketing Curaçao | Strategix",
+  title: "Marketing y contenido para restaurantes en Curaçao | Strategix",
   description:
-    "Restaurant marketing, food photography, video, social media and advertising for restaurants and food businesses in Curaçao.",
+    "¿Tu restaurante no se ve tan bien en redes como en persona? Fotografía gastronómica, Reels y manejo de redes en Curaçao. Paquetes desde 900 XCG al mes.",
 }
 
 export default function RestaurantsPage() {

@@ -3,9 +3,9 @@ import NeedPage from "@/components/needs/NeedPage"
 
 export const metadata = {
   alternates: { canonical: "/needs/more-customers" },
-  title: "Get More Customers | Strategix Curaçao",
+  title: "Marketing para atraer clientes en Curaçao | Strategix",
   description:
-    "Marketing strategies, content, social media and advertising designed to help businesses attract more customers in Curaçao.",
+    "¿Tu negocio se ve en redes pero no recibe suficientes consultas? Unimos contenido, redes, anuncios y web según el problema real de tu negocio en Curaçao.",
 }
 
 export default function MoreCustomersPage() {

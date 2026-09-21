@@ -326,13 +326,13 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
   ES: {
     "more-customers": {
       eyebrow: "CRECIMIENTO · CAPTACIÓN",
-      title: "Necesito más clientes.",
+      title: "¿Te ven, pero no llegan clientes?",
       intro:
-        "Tu negocio merece ser descubierto por las personas correctas. Creamos sistemas de marketing diseñados para aumentar visibilidad, atención y acción.",
+        "Si publicas y recibes pocas consultas, primero revisamos dónde se pierde el interés. Combinamos contenido, redes, anuncios o una web más clara según lo que necesite tu negocio en Curaçao.",
       benefits: [
-        "Aumentar tu visibilidad",
-        "Llegar a la audiencia correcta",
-        "Convertir atención en clientes",
+        "Detectar qué frena las consultas",
+        "Elegir los canales adecuados",
+        "Facilitar el contacto o la reserva",
       ],
       visualLabel: "CAMPAÑAS · CONTENIDO · RESULTADOS",
       workItems: [
@@ -373,13 +373,13 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
 
     "better-content": {
       eyebrow: "CREATIVIDAD · FOTO · VIDEO",
-      title: "Necesito mejor contenido.",
+      title: "¿Tus fotos no muestran la calidad de tu negocio?",
       intro:
-        "Un buen contenido hace que tu marca sea más fácil de recordar. Creamos fotografía, video y Reels para mostrar tu negocio como realmente merece.",
+        "Hacemos fotografía y Reels para que un cliente pueda ver tus productos, tu espacio y tu trabajo antes de escribirte. Producimos el contenido en Curaçao y lo entregamos listo para tus redes.",
       benefits: [
-        "Fotografía profesional",
-        "Video y Reels",
-        "Contenido pensado para tu marca",
+        "Fotos de productos, espacios o servicios",
+        "Reels listos para publicar",
+        "Contenido fiel a tu negocio",
       ],
       visualLabel: "FOTOGRAFÍA · VIDEO · REELS",
       workItems: [
@@ -420,13 +420,13 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
 
     "social-media": {
       eyebrow: "REDES SOCIALES · GESTIÓN",
-      title: "Necesito ayuda con mis redes.",
+      title: "¿No tienes tiempo para llevar tus redes?",
       intro:
-        "Tus redes sociales no deberían convertirse en otra tarea de tu lista. Te ayudamos a construir una presencia consistente, estratégica y profesional.",
+        "Si Instagram y Facebook pasan semanas sin publicaciones, tus clientes encuentran una imagen incompleta de tu negocio. Planificamos, creamos y organizamos el contenido para mantener tus redes activas con una oferta clara.",
       benefits: [
-        "Contenido constante",
-        "Gestión estratégica de redes",
-        "Una presencia digital más fuerte",
+        "Plan de publicaciones",
+        "Reels, fotos e historias según paquete",
+        "Gestión de Instagram y Facebook",
       ],
       visualLabel: "ESTRATEGIA · CONTENIDO · COMUNIDAD",
       workItems: [
@@ -467,13 +467,13 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
 
     advertising: {
       eyebrow: "PUBLICIDAD · META ADS",
-      title: "Quiero hacer publicidad.",
+      title: "¿Tus anuncios reciben vistas, pero pocas consultas?",
       intro:
-        "Hacer publicidad es mucho más que poner dinero detrás de una publicación. Creamos campañas para llegar a las personas correctas y llevarlas a la acción.",
+        "Antes de invertir más, definimos a quién quieres llegar y qué acción esperas: un mensaje, una consulta o una reserva. Creamos anuncios para Instagram y Facebook y revisamos lo que ocurre después del clic.",
       benefits: [
-        "Campañas en Meta",
-        "Segmentación de audiencia",
-        "Pruebas y optimización creativa",
+        "Objetivo claro para cada campaña",
+        "Anuncios y audiencia definidos",
+        "Medición de consultas y resultados",
       ],
       visualLabel: "META ADS · CAMPAÑAS · PERFORMANCE",
       workItems: [
@@ -515,36 +515,36 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
 
     website: {
       eyebrow: "WEB · PRESENCIA DIGITAL",
-      title: "Necesito una página web.",
+      title: "¿Tus clientes no encuentran una web clara?",
       intro:
-        "Tu página web suele ser uno de los primeros contactos serios que alguien tiene con tu negocio. Creamos experiencias digitales que comunican y generan confianza.",
+        "Cuando alguien busca tus servicios, necesita entender qué ofreces, cuánto cuesta y cómo contactarte. Diseñamos páginas web para negocios en Curaçao que presentan esa información de forma sencilla, especialmente en el móvil.",
       benefits: [
-        "Presencia digital profesional",
-        "Experiencia pensada para móvil",
-        "Caminos claros hacia la conversión",
+        "Servicios y precios fáciles de entender",
+        "Diseño cómodo en el móvil",
+        "Contacto o reserva visibles",
       ],
       visualLabel: "DISEÑO WEB · EXPERIENCIA · CONVERSIÓN",
       workItems: [
         {
           number: "01",
-          type: "DISEÑO WEB",
-          title: "Websites de marca",
+          type: "ESTRUCTURA",
+          title: "Servicios fáciles de entender",
           description:
-            "Páginas diseñadas para comunicar tu marca de manera clara y profesional.",
+            "Organizamos servicios, precios y respuestas a las preguntas que un cliente hace antes de contactarte.",
         },
         {
           number: "02",
-          type: "EXPERIENCIA",
-          title: "Experiencias digitales",
+          type: "MÓVIL",
+          title: "Diseño cómodo para el móvil",
           description:
-            "Interfaces diseñadas alrededor de cómo las personas realmente navegan y deciden.",
+            "Hacemos que leer, comparar y avanzar sea sencillo desde el teléfono.",
         },
         {
           number: "03",
-          type: "CONVERSIÓN",
-          title: "Recorridos de conversión",
+          type: "CONTACTO",
+          title: "Un siguiente paso visible",
           description:
-            "Caminos claros que llevan al visitante a contactar, reservar o comprar.",
+            "Ponemos el contacto o la reserva donde la persona lo necesita, sin obligarla a buscarlo.",
         },
       ],
       processLabel: "NUESTRO ENFOQUE",
@@ -563,36 +563,36 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
 
     "online-bookings": {
       eyebrow: "RESERVAS · CONVERSIÓN",
-      title: "Quiero recibir reservas online.",
+      title: "¿Pierdes citas entre mensajes y llamadas?",
       intro:
-        "Haz que sea más fácil para tus clientes dar el siguiente paso. Ayudamos a crear experiencias de reserva más claras que reduzcan fricción y conviertan interés en citas.",
+        "Cuando una persona quiere una cita, debería poder encontrar el servicio y dar el siguiente paso sin esperar una cadena de mensajes. Creamos una web con un proceso de reservas claro, adaptado a cómo trabaja tu negocio.",
       benefits: [
-        "Procesos de reserva más simples",
-        "Llamados a la acción claros",
-        "Más oportunidades de conversión",
+        "Servicios y horarios claros",
+        "Menos pasos para solicitar una cita",
+        "Flujo adaptado a tu agenda",
       ],
       visualLabel: "RESERVAS · UX · CONVERSIÓN",
       workItems: [
         {
           number: "01",
-          type: "RESERVAS",
-          title: "Experiencias de reserva",
+          type: "SERVICIOS",
+          title: "Servicios y opciones claras",
           description:
-            "Sistemas más claros que facilitan elegir una hora y tomar acción.",
+            "El cliente entiende qué puede reservar y qué información necesita dejar.",
         },
         {
           number: "02",
-          type: "UX",
-          title: "Recorridos del cliente",
+          type: "RESERVA",
+          title: "Menos mensajes para agendar",
           description:
-            "Recorridos simplificados para eliminar fricciones innecesarias.",
+            "Diseñamos los pasos para solicitar una cita sin repetir preguntas por varios canales.",
         },
         {
           number: "03",
-          type: "CONVERSIÓN",
-          title: "Llamados a la acción",
+          type: "AGENDA",
+          title: "Flujo adaptado a tu operación",
           description:
-            "Puntos de contacto claros que convierten interés en citas y consultas.",
+            "Acordamos contigo cómo se muestran horarios, solicitudes y confirmaciones según tu forma de trabajar.",
         },
       ],
       processLabel: "NUESTRO ENFOQUE",
@@ -896,6 +896,33 @@ const content: Record<Language, Record<NeedKey, NeedContent>> = {
   },
 }
 
+const priceByNeed: Record<Language, Record<NeedKey, string>> = {
+  ES: {
+    "more-customers": "Paquetes desde 900 XCG/mes · estrategia según necesidades",
+    "better-content": "Reels desde 200 XCG · fotos desde 350 XCG",
+    "social-media": "Paquetes mensuales desde 900 XCG",
+    advertising: "Precio según campaña · inversión publicitaria aparte",
+    website: "Landing 1.000–1.500 XCG · web 1.800–2.500 XCG",
+    "online-bookings": "Web + reservas 2.500–3.500 XCG · automatizaciones a medida",
+  },
+  EN: {
+    "more-customers": "Packages from XCG 900/month · strategy based on your needs",
+    "better-content": "Reels from XCG 200 · photos from XCG 350",
+    "social-media": "Monthly packages from XCG 900",
+    advertising: "Quoted by campaign · ad spend is separate",
+    website: "Landing page XCG 1,000–1,500 · website XCG 1,800–2,500",
+    "online-bookings": "Website + booking XCG 2,500–3,500 · custom automation",
+  },
+  PAP: {
+    "more-customers": "Paketnan for di 900 XCG/luna · strategia segun bo nesesidat",
+    "better-content": "Reels for di 200 XCG · foto for di 350 XCG",
+    "social-media": "Paketnan mensual for di 900 XCG",
+    advertising: "Preis segun kampaña · presupuesto di anunsio aparte",
+    website: "Landing 1.000–1.500 XCG · website 1.800–2.500 XCG",
+    "online-bookings": "Website + reserva 2.500–3.500 XCG · automashon personalisá",
+  },
+}
+
 export default function NeedPage({ slug }: { slug: string }) {
   const { language } = useLanguage()
 
@@ -925,24 +952,6 @@ export default function NeedPage({ slug }: { slug: string }) {
     : isPapiamento
       ? "Bai bek"
       : "Back"
-
-  const viewText = isSpanish
-    ? "VER EJEMPLOS"
-    : isPapiamento
-      ? "MIRA EHÈMPEL"
-      : "VIEW EXAMPLES"
-
-  const portfolioTitle = isSpanish
-    ? "Una marca se recuerda cuando tiene algo que decir."
-    : isPapiamento
-      ? "Un marka ta wordo rekordá ora e tin algu pa bisa."
-      : "A brand becomes memorable when it has something worth saying."
-
-  const portfolioText = isSpanish
-    ? "El material audiovisual que mostraremos aquí estará pensado para comunicar, generar atención y hacer que tu marca sea recordada."
-    : isPapiamento
-      ? "E material audiovisual ku nos lo mustra aki ta pensá pa komuniká, hala atenshon i hasi hende rekordá bo marka."
-      : "The audiovisual work we show here will be built to communicate, earn attention and make your brand memorable."
 
   const processIntro = isSpanish
     ? "No empezamos creando piezas. Primero entendemos qué necesita tu negocio y qué debe conseguir cada acción."
@@ -974,6 +983,7 @@ export default function NeedPage({ slug }: { slug: string }) {
 
             <div className="need-page-intro">
               <p>{data.intro}</p>
+              <p className="need-price">{priceByNeed[language][slug as NeedKey]}</p>
             </div>
           </div>
 
@@ -1015,19 +1025,19 @@ export default function NeedPage({ slug }: { slug: string }) {
 
               <span>
                 {isSpanish
-                  ? "¿QUÉ PODEMOS CREAR?"
+                  ? "QUÉ PODEMOS HACER"
                   : isPapiamento
-                    ? "KIKO NOS POR KREA?"
-                    : "WHAT CAN WE CREATE?"}
+                    ? "KIKO NOS POR HASI"
+                    : "WHAT WE CAN DO"}
               </span>
             </div>
 
             <p>
               {isSpanish
-                ? "Explora las áreas donde podemos convertir una necesidad de negocio en trabajo visual y estratégico."
+                ? "Estas son las partes del servicio. El alcance exacto se acuerda contigo antes de comenzar."
                 : isPapiamento
-                  ? "Mira e área kaminda nos por transformá un nesesidat di negoshi den trabou visual i strategiko."
-                  : "Explore the areas where we can turn a business need into strategic and visual work."}
+                  ? "Esakinan ta e partinan di e servisio. Nos ta akordá e alkanse eksakto ku bo promé ku kuminsá."
+                  : "These are the parts of the service. We agree on the exact scope with you before work begins."}
             </p>
 
           </div>
@@ -1037,8 +1047,7 @@ export default function NeedPage({ slug }: { slug: string }) {
           <div className="need-work-grid">
 
             {data.workItems.map((item, index) => (
-              <a
-                href="#portfolio"
+              <article
                 className={`need-work-card ${
                   index === 0
                     ? "need-work-card-large"
@@ -1063,10 +1072,6 @@ export default function NeedPage({ slug }: { slug: string }) {
                       {item.title}
                     </strong>
 
-                    <span className="need-work-arrow">
-                      ↗
-                    </span>
-
                   </div>
 
                 </div>
@@ -1082,117 +1087,13 @@ export default function NeedPage({ slug }: { slug: string }) {
 
                   <p>{item.description}</p>
 
-                  <span className="need-work-view">
-                    <span>{viewText}</span>
-                    <span>↗</span>
-                  </span>
-
                 </div>
 
-              </a>
+              </article>
             ))}
 
           </div>
 
-
-          {/* =====================================================
-              PORTFOLIO
-              NO REPETIMOS LAS TRES OPCIONES.
-              ESTE ESPACIO QUEDA PREPARADO PARA EL MATERIAL REAL.
-          ====================================================== */}
-          <div
-            className="need-portfolio"
-            id="portfolio"
-          >
-
-            <div className="need-portfolio-header">
-
-              <div className="need-section-label">
-                <span>01.1</span>
-
-                <span>
-                  {isSpanish
-                    ? "PORTFOLIO"
-                    : isPapiamento
-                      ? "PORTFOLIO"
-                      : "PORTFOLIO"}
-                </span>
-              </div>
-
-              <p>
-                {portfolioText}
-              </p>
-
-            </div>
-
-
-            <div className="need-portfolio-list">
-
-              <div className="need-portfolio-row">
-                <span>01</span>
-
-                <strong>
-                  {isSpanish
-                    ? "TRABAJO REAL"
-                    : isPapiamento
-                      ? "TRABOU REAL"
-                      : "REAL WORK"}
-                </strong>
-
-                <span>
-                  {portfolioTitle}
-                </span>
-
-                <span>↗</span>
-              </div>
-
-              <div className="need-portfolio-row">
-                <span>02</span>
-
-                <strong>
-                  {isSpanish
-                    ? "MATERIAL"
-                    : isPapiamento
-                      ? "MATERIAL"
-                      : "MATERIAL"}
-                </strong>
-
-                <span>
-                  {isSpanish
-                    ? "Fotografía, video y campañas"
-                    : isPapiamento
-                      ? "Fotografia, video i kampaña"
-                      : "Photography, video and campaigns"}
-                </span>
-
-                <span>↗</span>
-              </div>
-
-              <div className="need-portfolio-row">
-                <span>03</span>
-
-                <strong>
-                  {isSpanish
-                    ? "RESULTADO"
-                    : isPapiamento
-                      ? "RESULTADO"
-                      : "OUTCOME"}
-                </strong>
-
-                <span>
-                  {isSpanish
-                    ? "Contenido creado para generar acción"
-                    : isPapiamento
-                      ? "Kontenido krea pa trese aksion"
-                      : "Content created to drive action"}
-                </span>
-
-                <span>↗</span>
-              </div>
-
-            </div>
-
-          </div>
 
         </div>
       </section>

@@ -3,9 +3,9 @@ import NeedPage from "@/components/needs/NeedPage"
 
 export const metadata = {
   alternates: { canonical: "/needs/advertising" },
-  title: "Meta Ads & Digital Advertising | Strategix Curaçao",
+  title: "Anuncios de Instagram y Facebook en Curaçao | Strategix",
   description:
-    "Meta Ads and digital advertising campaigns designed to reach the right audience and generate enquiries, bookings and sales.",
+    "¿Tus anuncios reciben vistas pero pocas consultas? Creamos campañas de Meta Ads con objetivo, contenido y medición claros. Presupuesto publicitario aparte.",
 }
 
 export default function AdvertisingPage() {

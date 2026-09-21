@@ -3,9 +3,9 @@ import IndustryPage from "@/components/industries/IndustryPage"
 
 export const metadata = {
   alternates: { canonical: "/dental" },
-  title: "Dental Marketing Curaçao | Strategix",
+  title: "Marketing para clínicas dentales en Curaçao | Strategix",
   description:
-    "Dental marketing, photography, video, social media, advertising and appointment systems for dental clinics in Curaçao.",
+    "Ayudamos a clínicas dentales en Curaçao a explicar sus servicios y facilitar el contacto con web, contenido, redes sociales y sistemas de citas.",
 }
 
 export default function DentalPage() {

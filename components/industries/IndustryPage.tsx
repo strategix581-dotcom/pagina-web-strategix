@@ -18,6 +18,7 @@ type IndustryContent = {
   ctaTitle: string
   ctaText: string
   back: string
+  priceNote?: string
 }
 
 const content: Record<
@@ -47,17 +48,18 @@ const content: Record<
       ctaText:
         "Tell us about your restaurant, what you want to improve and where you feel stuck. We'll take it from there.",
       back: "Back to Strategix",
+      priceNote: "Content packages from XCG 900/month · see prices",
     },
 
     ES: {
       eyebrow: "RESTAURANTES Y COMIDA · CURAÇAO",
-      title: "Tu comida debería hacer que la gente deje de hacer scroll.",
+      title: "¿Tu restaurante luce mejor en persona que en redes?",
       intro:
-        "Strategix ayuda a restaurantes y negocios de comida a convertir lo que hacen bien en contenido, visibilidad y clientes.",
+        "Un cliente que aún no te conoce mira fotos, videos y reseñas antes de decidir dónde comer. Creamos fotografía gastronómica, Reels y contenido para mostrar tu menú y facilitar que te contacten o reserven.",
       problemTitle:
-        "Tu restaurante puede ser excelente. Las personas todavía necesitan una razón para descubrirlo.",
+        "Si el plato se ve mejor en la mesa que en Instagram, estás perdiendo una oportunidad.",
       problemText:
-        "Un buen plato, una cocina activa y una gran experiencia no sirven de mucho si nadie los ve. Creamos contenido visual y estrategias de marketing pensadas específicamente para cómo los restaurantes atraen atención y llevan personas a sus puertas.",
+        "Mostramos platos, ambiente y experiencia con fotos y video que puedes usar en redes, anuncios y tu web. Elegimos contigo el paquete según cuánto contenido necesitas cada mes.",
       servicesTitle: "En qué podemos ayudarte",
       services: [
         "Fotografía para restaurantes",
@@ -72,6 +74,7 @@ const content: Record<
       ctaText:
         "Cuéntanos sobre tu restaurante, qué quieres mejorar y qué sientes que no está funcionando. Nosotros nos encargamos del resto.",
       back: "Volver a Strategix",
+      priceNote: "Paquetes de contenido desde 900 XCG/mes · ver precios",
     },
 
     PAP: {
@@ -97,6 +100,7 @@ const content: Record<
       ctaText:
         "Konta nos tokante bo restorant, kiko bo ke mehorá i unda bo ta sinti ku bo tin problema. Nos lo yuda bo ku e siguiente paso.",
       back: "Bai bek na Strategix",
+      priceNote: "Paketnan di kontenido for di 900 XCG/luna · mira preisnan",
     },
   },
 
@@ -123,16 +127,17 @@ const content: Record<
       ctaText:
         "Tell us about your beauty business and what you want more of: visibility, bookings, clients or all three.",
       back: "Back to Strategix",
+      priceNote: "Content packages from XCG 900/month · see prices",
     },
 
     ES: {
       eyebrow: "BEAUTY & WELLNESS · CURAÇAO",
-      title: "Tu trabajo es hermoso. Tu marketing debería demostrarlo.",
+      title: "¿Tu agenda tiene huecos aunque tu trabajo es bueno?",
       intro:
-        "Ayudamos a salones, spas, nail salons, barberías y negocios de wellness a convertir su trabajo en visibilidad y reservas.",
-      problemTitle: "Nadie puede reservar lo que nunca descubre.",
+        "Quien busca un salón quiere ver resultados, precios y una forma fácil de pedir cita. Creamos fotos, Reels y contenido para salones, spas, uñas y barberías en Curaçao.",
+      problemTitle: "Las personas pueden admirar tu trabajo y aun así no saber cómo reservar.",
       problemText:
-        "Tus clientes ya saben lo bueno que es tu trabajo. El reto es conseguir que nuevas personas lo vean, confíen en ti y den el siguiente paso. Creamos contenido y marketing alrededor de tus servicios, tu estética y la experiencia que ofreces.",
+        "Mostramos servicios y resultados con claridad, mantenemos las redes activas y podemos conectar una web con un sistema de citas. Así cada persona entiende qué ofreces y cuál es el siguiente paso.",
       servicesTitle: "En qué podemos ayudarte",
       services: [
         "Fotografía para beauty",
@@ -147,6 +152,7 @@ const content: Record<
       ctaText:
         "Cuéntanos sobre tu negocio de beauty y qué quieres conseguir: más visibilidad, más reservas, más clientes o las tres.",
       back: "Volver a Strategix",
+      priceNote: "Paquetes de contenido desde 900 XCG/mes · ver precios",
     },
 
     PAP: {
@@ -171,6 +177,7 @@ const content: Record<
       ctaText:
         "Konta nos tokante bo negoshi di beauty i kiko bo ke mas: visibilidat, reservashon, kliente òf tur tres.",
       back: "Bai bek na Strategix",
+      priceNote: "Paketnan di kontenido for di 900 XCG/luna · mira preisnan",
     },
   },
 
@@ -389,6 +396,7 @@ export default function IndustryPage({
           <h1>{t.title}</h1>
 
           <p className="industry-intro">{t.intro}</p>
+          {t.priceNote && <Link href="/#packages" className="industry-price-link">{t.priceNote} →</Link>}
         </div>
 
         <section className="industry-problem">

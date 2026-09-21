@@ -3,9 +3,9 @@ import IndustryPage from "@/components/industries/IndustryPage"
 
 export const metadata = {
   alternates: { canonical: "/beauty" },
-  title: "Beauty & Wellness Marketing Curaçao | Strategix",
+  title: "Marketing para salones de belleza en Curaçao | Strategix",
   description:
-    "Marketing, content, social media, advertising and booking systems for beauty salons, spas, nail salons and barbershops in Curaçao.",
+    "¿Tienes huecos en tu agenda? Creamos contenido, redes y opciones de reserva para salones, spas y negocios de belleza en Curaçao. Paquetes desde 900 XCG.",
 }
 
 export default function BeautyPage() {

@@ -3,9 +3,9 @@ import NeedPage from "@/components/needs/NeedPage"
 
 export const metadata = {
   alternates: { canonical: "/needs/better-content" },
-  title: "Business Content Creation | Strategix Curaçao",
+  title: "Fotografía y Reels para negocios en Curaçao | Strategix",
   description:
-    "Professional business photography, Reels, video and creative content for businesses in Curaçao.",
+    "¿Tus fotos no muestran la calidad de tu negocio? Creamos fotografía, video y Reels en Curaçao. Reels desde 200 XCG y fotos desde 350 XCG.",
 }
 
 export default function BetterContentPage() {
