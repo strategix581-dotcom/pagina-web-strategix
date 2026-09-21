@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { LanguageProvider } from "@/components/LanguageProvider"
+import Footer from "@/components/Footer"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Strategix | Marketing & Creative Agency Curaçao",
+  title: "Strategix | Marketing, contenido y soluciones digitales en Curaçao",
   description:
-    "Strategix helps restaurants, beauty businesses and local brands get more customers through content, social media, advertising, websites and online bookings.",
+    "Contenido, redes sociales, diseño web, reservas y automatizaciones para negocios en Curaçao. Paquetes mensuales con precios claros y proyectos a medida.",
   keywords: [
     "marketing agency Curaçao",
     "social media Curaçao",
@@ -36,9 +37,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   )

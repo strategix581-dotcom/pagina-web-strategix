@@ -1,7 +1,9 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useLanguage, type Language } from "@/components/LanguageProvider"
+import { industryPortfolio } from "@/lib/industryPortfolio"
 
 type IndustryKey = "restaurants" | "beauty" | "clinics" | "dental"
 
@@ -322,6 +324,46 @@ const content: Record<
   },
 }
 
+const portfolioText: Record<
+  Language,
+  {
+    label: string
+    title: string
+    intro: string
+    categories: string[]
+    soon: string
+    open: string
+  }
+> = {
+  EN: {
+    label: "SELECTED WORK",
+    title: "See what we create for businesses like yours.",
+    intro:
+      "This space is ready for approved Strategix photography, video, Reels and campaign work.",
+    categories: ["Photography", "Video & Reels", "Campaigns"],
+    soon: "Content coming soon",
+    open: "View examples",
+  },
+  ES: {
+    label: "TRABAJO SELECCIONADO",
+    title: "Descubre lo que creamos para negocios como el tuyo.",
+    intro:
+      "Este espacio está preparado para fotografías, videos, Reels y campañas aprobadas de Strategix.",
+    categories: ["Fotografía", "Video y Reels", "Campañas"],
+    soon: "Contenido próximamente",
+    open: "Ver ejemplos",
+  },
+  PAP: {
+    label: "TRABOU SELEKTÁ",
+    title: "Mira kiko nos ta krea pa negoshi manera di bo.",
+    intro:
+      "E espasio aki ta kla pa fotografia, video, Reels i kampaña aprobá di Strategix.",
+    categories: ["Fotografia", "Video i Reels", "Kampaña"],
+    soon: "Kontenido ta bin pronto",
+    open: "Mira ehèmpel",
+  },
+}
+
 export default function IndustryPage({
   industry,
 }: {
@@ -329,6 +371,8 @@ export default function IndustryPage({
 }) {
   const { language } = useLanguage()
   const t = content[industry][language]
+  const portfolio = portfolioText[language]
+  const portfolioItems = industryPortfolio[industry]
 
   return (
     <main className="industry-page">
@@ -373,7 +417,12 @@ export default function IndustryPage({
 
             <div className="industry-service-list">
               {t.services.map((service, index) => (
-                <div className="industry-service" key={service}>
+                <a
+                  href="#industry-work"
+                  className="industry-service"
+                  key={service}
+                  aria-label={`${portfolio.open}: ${service}`}
+                >
                   <span>
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -381,14 +430,67 @@ export default function IndustryPage({
                   <strong>{service}</strong>
 
                   <span>↗</span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
         </section>
 
+        <section className="industry-work" id="industry-work">
+          <div className="industry-section-number">03</div>
+
+          <div>
+            <span className="industry-label">{portfolio.label}</span>
+            <h2>{portfolio.title}</h2>
+            <p className="industry-work-intro">{portfolio.intro}</p>
+
+            {portfolioItems.length > 0 ? (
+              <div className="industry-work-grid">
+                {portfolioItems.map((item) => (
+                  <article className="industry-work-card" key={item.src}>
+                    {item.type === "image" ? (
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        fill
+                        sizes="(max-width: 700px) 100vw, 33vw"
+                      />
+                    ) : (
+                      <video
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={item.poster}
+                        aria-label={item.alt}
+                      >
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+                    )}
+                    <strong>{item.title}</strong>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="industry-work-grid">
+                {portfolio.categories.map((category, index) => (
+                  <article
+                    className="industry-work-placeholder"
+                    key={category}
+                  >
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{category}</strong>
+                    <small>{portfolio.soon}</small>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
         <section className="industry-cta">
-          <span className="industry-label">03 / LET&apos;S TALK</span>
+          <span className="industry-label">
+            04 / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
+          </span>
 
           <h2>{t.ctaTitle}</h2>
 

@@ -13,21 +13,21 @@ const languages: { code: Language; name: string }[] = [
 
 const navText = {
   EN: {
-    work: "Work",
-    services: "Services",
-    about: "About",
+    work: "Services",
+    services: "Packages",
+    about: "Custom",
     project: "Start a project ↗",
   },
   ES: {
-    work: "Trabajo",
-    services: "Servicios",
-    about: "Nosotros",
+    work: "Servicios",
+    services: "Paquetes",
+    about: "A medida",
     project: "Iniciar proyecto ↗",
   },
   PAP: {
-    work: "Trabou",
-    services: "Servisionan",
-    about: "Tokante nos",
+    work: "Servisionan",
+    services: "Paketnan",
+    about: "Personalisá",
     project: "Kuminsá un proyekto ↗",
   },
 }
@@ -119,15 +119,15 @@ export default function Navbar() {
         {/* NAVIGATION */}
 
         <div className="nav-links">
-          <Link href="/#needs">
+          <Link href="/#services">
             {t.work}
           </Link>
 
-          <Link href="/#industries">
+          <Link href="/#packages">
             {t.services}
           </Link>
 
-          <Link href="/#about">
+          <Link href="/#custom">
             {t.about}
           </Link>
         </div>

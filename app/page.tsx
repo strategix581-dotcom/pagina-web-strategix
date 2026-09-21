@@ -1,13 +1,6 @@
 import Navbar from "@/components/Navbar"
-import Hero from "@/components/Hero"
-import IndustriesStrategix from "@/components/IndustriesStrategix"
+import SimpleHome from "@/components/SimpleHome"
 
 export default function Home() {
-  return (
-    <main>
-      <Navbar />
-      <Hero />
-      <IndustriesStrategix />
-    </main>
-  )
+  return <><Navbar /><SimpleHome /></>
 }

@@ -16,7 +16,7 @@ export function LanguageProvider({
 }: {
   children: React.ReactNode
 }) {
-  const [language, setLanguageState] = useState<Language>("EN")
+  const [language, setLanguageState] = useState<Language>("ES")
   const restoreFrameRef = useRef<number | null>(null)
 
   useEffect(() => {
