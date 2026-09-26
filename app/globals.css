@@ -1414,7 +1414,6 @@ button {
 .industry-work-card,
 .industry-work-placeholder {
   position: relative;
-  min-height: 330px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .11);
   border-radius: 20px;
@@ -1423,18 +1422,47 @@ button {
     rgba(255, 255, 255, .025);
 }
 
+.industry-work-card--landscape {
+  grid-column: span 2;
+}
+
+.industry-work-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #0b0b10;
+}
+
+.industry-work-card--landscape .industry-work-media {
+  aspect-ratio: 16 / 9;
+}
+
 .industry-work-card img,
 .industry-work-card video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.industry-work-card strong {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  z-index: 2;
+.industry-work-card video {
+  display: block;
+}
+
+.industry-work-caption {
+  padding: 22px 23px 26px;
+}
+
+.industry-work-caption h3 {
+  margin: 0 0 9px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.industry-work-caption p {
+  margin: 0;
+  color: #9b959f;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .industry-work-placeholder {
@@ -1633,7 +1661,10 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .industry-work-card,
+  .industry-work-card--landscape {
+    grid-column: auto;
+  }
+
   .industry-work-placeholder {
     min-height: 280px;
   }

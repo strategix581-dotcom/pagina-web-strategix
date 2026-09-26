@@ -598,26 +598,35 @@ export default function IndustryPage({
 
               <div className="industry-work-grid">
                 {portfolioItems.map((item) => (
-                  <article className="industry-work-card" key={item.src}>
-                    {item.type === "image" ? (
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        sizes="(max-width: 700px) 100vw, 33vw"
-                      />
-                    ) : (
-                      <video
-                        controls
-                        playsInline
-                        preload="metadata"
-                        poster={item.poster}
-                        aria-label={item.alt}
-                      >
-                        <source src={item.src} type="video/mp4" />
-                      </video>
-                    )}
-                    <strong>{item.title}</strong>
+                  <article
+                    className={`industry-work-card${item.orientation === "landscape" ? " industry-work-card--landscape" : ""}`}
+                    key={item.src}
+                  >
+                    <div className="industry-work-media">
+                      {item.type === "image" ? (
+                        <Image
+                          src={item.src}
+                          alt={item.alt[language]}
+                          fill
+                          sizes="(max-width: 700px) 100vw, 33vw"
+                        />
+                      ) : (
+                        <video
+                          controls
+                          playsInline
+                          preload="none"
+                          poster={item.poster}
+                          aria-label={item.alt[language]}
+                        >
+                          <source src={item.src} type="video/mp4" />
+                          {language === "ES" ? "Tu navegador no puede reproducir este video." : language === "PAP" ? "Bo browser no por reproduci e video aki." : "Your browser cannot play this video."}
+                        </video>
+                      )}
+                    </div>
+                    <div className="industry-work-caption">
+                      <h3>{item.title[language]}</h3>
+                      <p>{item.description[language]}</p>
+                    </div>
                   </article>
                 ))}
               </div>
