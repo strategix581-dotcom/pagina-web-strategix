@@ -1437,14 +1437,16 @@ button {
   aspect-ratio: 16 / 9;
 }
 
-.industry-work-card img,
+.industry-work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .industry-work-card video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.industry-work-card video {
   display: block;
 }
 

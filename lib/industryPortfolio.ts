@@ -88,6 +88,54 @@ export const industryPortfolio: Record<
         PAP: "Trailer di apertura di Flakos Grill na Beach Station",
       },
     },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/fotografia-postre-chocolate-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Fotografía de postres", EN: "Dessert photography", PAP: "Fotografia di dessert" },
+      description: {
+        ES: "Fotografía gastronómica que destaca textura, presentación y ambiente.",
+        EN: "Food photography focused on texture, presentation and atmosphere.",
+        PAP: "Fotografia di kuminda ku ta mustra tekstura, presentashon i ambiente.",
+      },
+      alt: {
+        ES: "Porción de pastel de chocolate presentada en un restaurante",
+        EN: "Slice of chocolate cake presented in a restaurant",
+        PAP: "Pida bolo di chukulati presentá den un restorant",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/fotografia-menu-angus-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Menú de Angus", EN: "Angus menu", PAP: "Menú di Angus" },
+      description: {
+        ES: "Una composición de platos muestra la variedad y presentación del restaurante.",
+        EN: "A composed table spread shows the restaurant's variety and presentation.",
+        PAP: "Un komposishon di platonan ta mustra e variedat i presentashon di e restorant.",
+      },
+      alt: {
+        ES: "Selección de carnes, ceviche, salmón y ensalada del restaurante Angus",
+        EN: "Selection of steak, ceviche, salmon and salad from Angus restaurant",
+        PAP: "Selekshon di karni, ceviche, salmon i salada di restorant Angus",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/fotografia-producto-pizza-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Producto en acción", EN: "Product in action", PAP: "Produkto den akshon" },
+      description: {
+        ES: "Una toma de preparación convierte un producto cotidiano en contenido visual.",
+        EN: "An action shot turns an everyday product into engaging visual content.",
+        PAP: "Un toma di preparashon ta konvertí un produkto diario den kontenido visual.",
+      },
+      alt: {
+        ES: "Salsa vertiéndose sobre una pizza recién preparada",
+        EN: "Sauce being poured over a freshly prepared pizza",
+        PAP: "Saus ta wordu basha riba un pizza resien prepará",
+      },
+    },
   ],
   beauty: [
     {
@@ -122,6 +170,54 @@ export const industryPortfolio: Record<
         ES: "Dueña de Dynailsty celebra diez años del negocio",
         EN: "Dynailsty owner celebrates ten years in business",
         PAP: "Doño di Dynailsty ta selebrá dies aña di negoshi",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/beauty/fotografia-servicio-unas-dynailsty-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Servicio de uñas en Dynailsty", EN: "Nail service at Dynailsty", PAP: "Servisio di uña na Dynailsty" },
+      description: {
+        ES: "Fotografía de proceso que muestra al equipo, el espacio y la experiencia del servicio.",
+        EN: "Process photography showing the team, the space and the service experience.",
+        PAP: "Fotografia di proseso ku ta mustra e tim, e espasio i e eksperensia di servisio.",
+      },
+      alt: {
+        ES: "Técnica de Dynailsty realizando un servicio de uñas",
+        EN: "Dynailsty technician providing a nail service",
+        PAP: "Tekniko di Dynailsty ta hasi un servisio di uña",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/beauty/fotografia-tratamiento-facial-grateful-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Tratamiento facial en Grateful", EN: "Facial treatment at Grateful", PAP: "Tratamentu fasial na Grateful" },
+      description: {
+        ES: "Una imagen de servicio que comunica cuidado, técnica y confianza.",
+        EN: "A service image that communicates care, technique and trust.",
+        PAP: "Un imágen di servisio ku ta komuniká kuido, téknika i konfiansa.",
+      },
+      alt: {
+        ES: "Clienta recibe un tratamiento facial en Grateful Laser & Beauty Studio",
+        EN: "Client receives a facial treatment at Grateful Laser & Beauty Studio",
+        PAP: "Kliente ta risibí un tratamentu fasial na Grateful Laser & Beauty Studio",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/beauty/fotografia-producto-dynailsty-curacao.jpg",
+      orientation: "portrait",
+      title: { ES: "Campaña de producto para Dynailsty", EN: "Product campaign for Dynailsty", PAP: "Kampaña di produkto pa Dynailsty" },
+      description: {
+        ES: "Retrato creativo para presentar una colección de colores de uñas.",
+        EN: "A creative portrait presenting a colorful nail product collection.",
+        PAP: "Un retrato kreativo pa presentá un kolekshon kolorido di produkto pa uña.",
+      },
+      alt: {
+        ES: "Retrato creativo de Dynailsty rodeado de esmaltes de colores",
+        EN: "Creative Dynailsty portrait surrounded by colorful nail polish",
+        PAP: "Retrato kreativo di Dynailsty rondó di esmalte di diferente koló",
       },
     },
   ],
