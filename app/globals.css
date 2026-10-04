@@ -3188,6 +3188,21 @@ button {
 
 /* Individual photo and video services */
 .individual-services-section { border-top: 1px solid #2f2638; }
+.portfolio-section { position: relative; border-block: 1px solid #2f2638; background: radial-gradient(circle at 50% 20%, rgba(145,91,235,.1), transparent 48%), #0d0a12; }
+.portfolio-heading { max-width: 760px; }
+.portfolio-entry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.portfolio-entry { position: relative; min-height: 610px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 22px; color: #fff; isolation: isolate; }
+.portfolio-entry img { z-index: -2; object-fit: cover; transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .4s ease; }
+.portfolio-entry:first-child img { object-position: center 32%; }
+.portfolio-entry:last-child img { object-position: center 62%; }
+.portfolio-entry-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(8,7,11,.04) 32%, rgba(8,7,11,.92) 100%); }
+.portfolio-entry-copy { position: absolute; inset: auto 0 0; padding: 34px; }
+.portfolio-entry-copy > span { color: #c6a5ff; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.portfolio-entry-copy h3 { margin: 10px 0 8px; font-size: clamp(37px, 4vw, 58px); line-height: .95; letter-spacing: -.055em; font-weight: 600; }
+.portfolio-entry-copy p { max-width: 390px; margin: 0 0 20px; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.5; }
+.portfolio-entry-copy strong { color: #e3d4ff; font-size: 13px; }
+.portfolio-entry:hover img { transform: scale(1.035); filter: saturate(1.06) contrast(1.03); }
+.portfolio-entry:focus-visible { outline: 2px solid #b18cff; outline-offset: 4px; }
 .individual-services-heading { max-width: 780px; margin-bottom: 38px; }
 .individual-services-heading h2 { margin: 16px 0 15px; font-size: clamp(36px, 4.8vw, 64px); line-height: 1; letter-spacing: -.055em; font-weight: 600; }
 .individual-services-heading > p { max-width: 690px; margin: 0; color: #aaa3b2; font-size: 16px; line-height: 1.65; }
@@ -3214,6 +3229,9 @@ button {
 }
 
 @media (max-width: 700px) {
+  .portfolio-entry-grid { grid-template-columns: 1fr; }
+  .portfolio-entry { min-height: 490px; border-radius: 17px; }
+  .portfolio-entry-copy { padding: 26px 23px; }
   .individual-services-heading h2,
   .industry-individual-services .individual-services-heading h2 { font-size: 38px; }
   .individual-service-group { padding: 24px 20px; border-radius: 15px; }

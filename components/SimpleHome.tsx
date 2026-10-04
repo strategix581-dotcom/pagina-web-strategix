@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useLanguage } from "@/components/LanguageProvider"
 import PackageComparison from "@/components/PackageComparison"
 import IndividualServices from "@/components/IndividualServices"
@@ -24,6 +25,14 @@ const copy = {
       ["Diseño web", "Páginas rápidas y claras que presentan tu oferta y facilitan el contacto.", "Landing 1.000–1.500 XCG · Web 1.800–2.500 XCG"],
       ["Reservas y automatizaciones", "Sistemas de citas, formularios y flujos que ahorran tiempo a tu equipo.", "Web + reservas 2.500–3.500 XCG · Automatizaciones a medida"],
     ],
+    portfolioLabel: "PORTAFOLIO",
+    portfolioTitle: "Mira el trabajo antes de elegir.",
+    portfolioIntro: "Explora una selección visual de fotografía y video organizada por sector.",
+    portfolioCta: "Ver portafolio",
+    portfolioBeauty: "Beauty",
+    portfolioBeautyText: "Belleza, estética y servicios personales.",
+    portfolioFood: "Gastronomía",
+    portfolioFoodText: "Restaurantes, productos y experiencias culinarias.",
     packagesLabel: "PAQUETES MENSUALES",
     packagesTitle: "Precios visibles. Alcance claro.",
     packagesIntro: "Elige tu sector y compara qué incluye cada paquete antes de contactarnos.",
@@ -61,6 +70,14 @@ const copy = {
       ["Website design", "Fast, clear websites that explain your offer and make contact easy.", "Landing XCG 1,000–1,500 · Website XCG 1,800–2,500"],
       ["Bookings & automation", "Booking systems, forms and workflows that save your team time.", "Website + booking XCG 2,500–3,500 · Custom automation"],
     ],
+    portfolioLabel: "PORTFOLIO",
+    portfolioTitle: "See the work before you choose.",
+    portfolioIntro: "Explore a visual selection of photography and video organized by industry.",
+    portfolioCta: "View portfolio",
+    portfolioBeauty: "Beauty",
+    portfolioBeautyText: "Beauty, wellness and personal services.",
+    portfolioFood: "Food",
+    portfolioFoodText: "Restaurants, products and culinary experiences.",
     packagesLabel: "MONTHLY PACKAGES",
     packagesTitle: "Visible prices. Clear scope.",
     packagesIntro: "Choose your industry and compare exactly what each package includes.",
@@ -98,6 +115,14 @@ const copy = {
       ["Diseño di website", "Páginanan lihé i kla ku ta presentá bo oferta i hasi kontakto fásil.", "Landing 1.000–1.500 XCG · Website 1.800–2.500 XCG"],
       ["Reservashon i automashon", "Sistema di sita, formulario i proseso ku ta spar tempu.", "Website + reservashon 2.500–3.500 XCG · Automashon personalisá"],
     ],
+    portfolioLabel: "PORTAFOLIO",
+    portfolioTitle: "Mira e trabou promé ku bo skohe.",
+    portfolioIntro: "Eksplorá un selekshon visual di fotografia i video organisá pa sektór.",
+    portfolioCta: "Mira portafolio",
+    portfolioBeauty: "Beauty",
+    portfolioBeautyText: "Beleza, bienestar i servisionan personal.",
+    portfolioFood: "Gastronomia",
+    portfolioFoodText: "Restorant, produkto i eksperensianan kulinario.",
     packagesLabel: "PAKETNAN MENSUAL",
     packagesTitle: "Preisnan visibel. Kontenido kla.",
     packagesIntro: "Skohe bo sektór i kompará kiko kada pakete ta inkluí.",
@@ -121,6 +146,8 @@ const copy = {
 } satisfies Record<Language, {
   kicker: string; title: string; intro: string; seePrices: string; talk: string;
   servicesLabel: string; serviceCta: string; serviceDetails: string; servicesTitle: string; servicesIntro: string; services: string[][];
+  portfolioLabel: string; portfolioTitle: string; portfolioIntro: string; portfolioCta: string;
+  portfolioBeauty: string; portfolioBeautyText: string; portfolioFood: string; portfolioFoodText: string;
   packagesLabel: string; packagesTitle: string; packagesIntro: string; month: string; packages: string[][];
   packageNote: string; customLabel: string; customTitle: string; customBody: string;
   customPrice: string; customCta: string; contactLabel: string; contactTitle: string; contactBody: string;
@@ -167,6 +194,32 @@ export default function SimpleHome() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="simple-section portfolio-section" id="portfolio">
+        <div className="page-shell">
+          <div className="section-heading portfolio-heading">
+            <span className="eyebrow">{t.portfolioLabel}</span>
+            <h2>{t.portfolioTitle}</h2>
+            <p>{t.portfolioIntro}</p>
+          </div>
+          <div className="portfolio-entry-grid">
+            <a className="portfolio-entry" href="/beauty#industry-work">
+              <Image src="/portfolio/beauty/beauty-photo-03.jpg" alt={language === "ES" ? "Portafolio de fotografía Beauty" : language === "PAP" ? "Portafolio di fotografia Beauty" : "Beauty photography portfolio"} fill sizes="(max-width: 700px) 100vw, 50vw" />
+              <span className="portfolio-entry-shade" />
+              <div className="portfolio-entry-copy">
+                <span>01</span><h3>{t.portfolioBeauty}</h3><p>{t.portfolioBeautyText}</p><strong>{t.portfolioCta} ↗</strong>
+              </div>
+            </a>
+            <a className="portfolio-entry" href="/restaurants#industry-work">
+              <Image src="/portfolio/restaurants/restaurant-photo-04.jpg" alt={language === "ES" ? "Portafolio de fotografía gastronómica" : language === "PAP" ? "Portafolio di fotografia gastronomiko" : "Food photography portfolio"} fill sizes="(max-width: 700px) 100vw, 50vw" />
+              <span className="portfolio-entry-shade" />
+              <div className="portfolio-entry-copy">
+                <span>02</span><h3>{t.portfolioFood}</h3><p>{t.portfolioFoodText}</p><strong>{t.portfolioCta} ↗</strong>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
