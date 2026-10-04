@@ -9,6 +9,7 @@ export type PortfolioItem = {
   src: string
   poster?: string
   orientation?: "portrait" | "landscape"
+  featured?: boolean
   title: Record<Language, string>
   description: Record<Language, string>
   alt: Record<Language, string>
@@ -22,8 +23,8 @@ export const industryPortfolio: Record<
   restaurants: [
     {
       type: "video",
-      src: "/portfolio/restaurants/tomahawk-restaurante-curacao.mp4",
-      poster: "/portfolio/restaurants/tomahawk-restaurante-curacao.webp",
+      src: "/portfolio/restaurants/restaurant-video-01.mp4",
+      poster: "/portfolio/restaurants/restaurant-video-01.webp",
       orientation: "portrait",
       title: { ES: "Tomahawk a la parrilla", EN: "Tomahawk on the grill", PAP: "Tomahawk na gril" },
       description: {
@@ -39,8 +40,8 @@ export const industryPortfolio: Record<
     },
     {
       type: "video",
-      src: "/portfolio/restaurants/ceviche-angus-restaurante-curacao.mp4",
-      poster: "/portfolio/restaurants/ceviche-angus-restaurante-curacao.webp",
+      src: "/portfolio/restaurants/restaurant-video-02.mp4",
+      poster: "/portfolio/restaurants/restaurant-video-02.webp",
       orientation: "portrait",
       title: { ES: "Ceviche en Angus", EN: "Ceviche at Angus", PAP: "Ceviche na Angus" },
       description: {
@@ -56,8 +57,8 @@ export const industryPortfolio: Record<
     },
     {
       type: "video",
-      src: "/portfolio/restaurants/pasta-siciliana-restaurante-curacao.mp4",
-      poster: "/portfolio/restaurants/pasta-siciliana-restaurante-curacao.webp",
+      src: "/portfolio/restaurants/restaurant-video-03.mp4",
+      poster: "/portfolio/restaurants/restaurant-video-03.webp",
       orientation: "portrait",
       title: { ES: "Pasta en Siciliana", EN: "Pasta at Siciliana", PAP: "Pasta na Siciliana" },
       description: {
@@ -73,8 +74,8 @@ export const industryPortfolio: Record<
     },
     {
       type: "video",
-      src: "/portfolio/restaurants/lanzamiento-flakos-beach-station-curacao.mp4",
-      poster: "/portfolio/restaurants/lanzamiento-flakos-beach-station-curacao.webp",
+      src: "/portfolio/restaurants/restaurant-video-04.mp4",
+      poster: "/portfolio/restaurants/restaurant-video-04.webp",
       orientation: "landscape",
       title: { ES: "Nueva sede de Flakos Grill", EN: "Flakos Grill's new location", PAP: "Sede nobo di Flakos Grill" },
       description: {
@@ -90,7 +91,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/restaurants/fotografia-postre-chocolate-curacao.jpg",
+      src: "/portfolio/restaurants/restaurant-photo-01.jpg",
       orientation: "portrait",
       title: { ES: "Fotografía de postres", EN: "Dessert photography", PAP: "Fotografia di dessert" },
       description: {
@@ -106,7 +107,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/restaurants/fotografia-menu-angus-curacao.jpg",
+      src: "/portfolio/restaurants/restaurant-photo-02.jpg",
       orientation: "portrait",
       title: { ES: "Menú de Angus", EN: "Angus menu", PAP: "Menú di Angus" },
       description: {
@@ -122,7 +123,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/restaurants/fotografia-producto-pizza-curacao.jpg",
+      src: "/portfolio/restaurants/restaurant-photo-03.jpg",
       orientation: "portrait",
       title: { ES: "Producto en acción", EN: "Product in action", PAP: "Produkto den akshon" },
       description: {
@@ -136,12 +137,93 @@ export const industryPortfolio: Record<
         PAP: "Saus ta wordu basha riba un pizza resien prepará",
       },
     },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/restaurant-photo-04.jpg",
+      orientation: "portrait",
+      featured: true,
+      title: { ES: "Serie gastronómica para Kai Poke", EN: "Food series for Kai Poke", PAP: "Serie di kuminda pa Kai Poke" },
+      description: {
+        ES: "Dirección visual, color y detalle para convertir cada roll en una imagen de campaña.",
+        EN: "Visual direction, color and detail turn every roll into a campaign image.",
+        PAP: "Direkshon visual, koló i detaye ta konvertí kada roll den un imágen di kampaña.",
+      },
+      alt: {
+        ES: "Salsa cayendo sobre rollos de sushi de Kai Poke",
+        EN: "Sauce pouring over Kai Poke sushi rolls",
+        PAP: "Saus ta kai riba sushi rolls di Kai Poke",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/restaurant-photo-05.jpg",
+      orientation: "portrait",
+      title: { ES: "Color que abre el apetito", EN: "Color that builds appetite", PAP: "Koló ku ta habri apetit" },
+      description: {
+        ES: "Fotografía de producto pensada para menús, redes sociales y campañas.",
+        EN: "Product photography created for menus, social media and campaigns.",
+        PAP: "Fotografia di produkto pa menú, red sosial i kampaña.",
+      },
+      alt: {
+        ES: "Rollos de sushi con atún, aguacate y algas para Kai Poke",
+        EN: "Sushi rolls with tuna, avocado and seaweed for Kai Poke",
+        PAP: "Sushi rolls ku tuna, avocado i laman pa Kai Poke",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/restaurant-photo-06.jpg",
+      orientation: "portrait",
+      title: { ES: "Detalle de producto", EN: "Product detail", PAP: "Detaye di produkto" },
+      description: {
+        ES: "Un encuadre limpio que destaca ingredientes, textura y frescura.",
+        EN: "A clean composition that highlights ingredients, texture and freshness.",
+        PAP: "Un komposishon limpi ku ta destaká ingredientenan, tekstura i freskura.",
+      },
+      alt: {
+        ES: "Pieza de sushi sostenida con palillos sobre fondo turquesa",
+        EN: "Sushi piece held with chopsticks against a turquoise background",
+        PAP: "Pida sushi den palitu kontra un fondo turkois",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/restaurant-photo-07.jpg",
+      orientation: "portrait",
+      title: { ES: "Textura y frescura", EN: "Texture and freshness", PAP: "Tekstura i freskura" },
+      description: {
+        ES: "Una toma cercana diseñada para detener la mirada en redes sociales.",
+        EN: "A close-up designed to stop the scroll on social media.",
+        PAP: "Un close-up diseñá pa hala atenshon riba red sosial.",
+      },
+      alt: {
+        ES: "Rollo de sushi con aguacate sostenido por palillos",
+        EN: "Avocado sushi roll held with chopsticks",
+        PAP: "Sushi roll ku avocado den palitu",
+      },
+    },
+    {
+      type: "image",
+      src: "/portfolio/restaurants/restaurant-photo-08.jpg",
+      orientation: "portrait",
+      title: { ES: "Sushi crujiente de Kai Poke", EN: "Kai Poke crispy sushi", PAP: "Sushi krispi di Kai Poke" },
+      description: {
+        ES: "Iluminación y composición comercial para comunicar sabor y abundancia.",
+        EN: "Commercial lighting and composition that communicate flavor and abundance.",
+        PAP: "Lus i komposishon komersial ku ta komuniká sabor i abundansia.",
+      },
+      alt: {
+        ES: "Rollos de sushi crujiente con salsa y cebolla frita de Kai Poke",
+        EN: "Kai Poke crispy sushi rolls with sauce and fried onion",
+        PAP: "Sushi rolls krispi ku saus i siboyo fri di Kai Poke",
+      },
+    },
   ],
   beauty: [
     {
       type: "video",
-      src: "/portfolio/beauty/video-educativo-estetica-curacao.mp4",
-      poster: "/portfolio/beauty/video-educativo-estetica-curacao.webp",
+      src: "/portfolio/beauty/beauty-video-01.mp4",
+      poster: "/portfolio/beauty/beauty-video-01.webp",
       orientation: "portrait",
       title: { ES: "Contenido educativo para Grateful", EN: "Educational content for Grateful", PAP: "Kontenido edukativo pa Grateful" },
       description: {
@@ -157,8 +239,8 @@ export const industryPortfolio: Record<
     },
     {
       type: "video",
-      src: "/portfolio/beauty/aniversario-dynailsty-video-curacao.mp4",
-      poster: "/portfolio/beauty/aniversario-dynailsty-video-curacao.webp",
+      src: "/portfolio/beauty/beauty-video-02.mp4",
+      poster: "/portfolio/beauty/beauty-video-02.webp",
       orientation: "portrait",
       title: { ES: "10 años de Dynailsty", EN: "10 years of Dynailsty", PAP: "10 aña di Dynailsty" },
       description: {
@@ -174,7 +256,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/beauty/fotografia-servicio-unas-dynailsty-curacao.jpg",
+      src: "/portfolio/beauty/beauty-photo-01.jpg",
       orientation: "portrait",
       title: { ES: "Servicio de uñas en Dynailsty", EN: "Nail service at Dynailsty", PAP: "Servisio di uña na Dynailsty" },
       description: {
@@ -190,7 +272,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/beauty/fotografia-tratamiento-facial-grateful-curacao.jpg",
+      src: "/portfolio/beauty/beauty-photo-02.jpg",
       orientation: "portrait",
       title: { ES: "Tratamiento facial en Grateful", EN: "Facial treatment at Grateful", PAP: "Tratamentu fasial na Grateful" },
       description: {
@@ -206,7 +288,7 @@ export const industryPortfolio: Record<
     },
     {
       type: "image",
-      src: "/portfolio/beauty/fotografia-producto-dynailsty-curacao.jpg",
+      src: "/portfolio/beauty/beauty-photo-03.jpg",
       orientation: "portrait",
       title: { ES: "Campaña de producto para Dynailsty", EN: "Product campaign for Dynailsty", PAP: "Kampaña di produkto pa Dynailsty" },
       description: {

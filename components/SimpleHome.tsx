@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/LanguageProvider"
 import PackageComparison from "@/components/PackageComparison"
+import IndividualServices from "@/components/IndividualServices"
 
 type Language = "ES" | "EN" | "PAP"
 
@@ -10,7 +11,7 @@ const copy = {
     kicker: "MARKETING Y SOLUCIONES DIGITALES · CURAÇAO",
     title: "Haz que te encuentren, te elijan y reserven contigo.",
     intro: "Contenido, redes y herramientas digitales para que tu negocio crezca. Mira los precios y elige por dónde empezar.",
-    seePrices: "Ver paquetes y precios",
+    seePrices: "Ver servicios y precios",
     talk: "Hablar por WhatsApp",
     servicesLabel: "ELIGE LO QUE NECESITAS",
     serviceCta: "Consultar servicio",
@@ -47,7 +48,7 @@ const copy = {
     kicker: "MARKETING & DIGITAL SOLUTIONS · CURAÇAO",
     title: "Help customers find you, choose you and book with you.",
     intro: "Content, social media and digital tools to help your business grow. See the prices and choose where to start.",
-    seePrices: "See packages and prices",
+    seePrices: "See services and prices",
     talk: "Chat on WhatsApp",
     servicesLabel: "CHOOSE WHAT YOU NEED",
     serviceCta: "Ask about this service",
@@ -84,7 +85,7 @@ const copy = {
     kicker: "MARKETING I SOLUSHON DIGITAL · KÒRSOU",
     title: "Yuda kliente haña bo, skohe bo i reservá serka bo.",
     intro: "Kontenido, rednan sosial i herramientanan digital pa yuda bo negoshi krese. Mira e preisnan i skohe unda pa kuminsá.",
-    seePrices: "Mira paketnan i preisnan",
+    seePrices: "Mira servisionan i preisnan",
     talk: "Papía via WhatsApp",
     servicesLabel: "SKOHE LOKE BO TIN MESTER",
     serviceCta: "Pidi informashon",
@@ -145,7 +146,7 @@ export default function SimpleHome() {
           <h1>{t.title}</h1>
           <p>{t.intro}</p>
           <div className="simple-actions">
-            <a className="button-primary" href="#packages">{t.seePrices} <span aria-hidden="true">↘</span></a>
+            <a className="button-primary" href="#individual-services">{t.seePrices} <span aria-hidden="true">↘</span></a>
             <a className="button-secondary" href={whatsapp} target="_blank" rel="noopener noreferrer">{t.talk} <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -168,6 +169,8 @@ export default function SimpleHome() {
           ))}
         </div>
       </section>
+
+      <IndividualServices language={language} />
 
       <section className="simple-section packages-section" id="packages">
         <div className="page-shell">

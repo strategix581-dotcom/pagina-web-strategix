@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage, type Language } from "@/components/LanguageProvider"
+import IndividualServices from "@/components/IndividualServices"
 import { industryPortfolio } from "@/lib/industryPortfolio"
 
 type IndustryKey = "restaurants" | "beauty" | "clinics" | "dental"
@@ -521,7 +522,9 @@ export default function IndustryPage({
   const { language } = useLanguage()
   const t = content[industry][language]
   const portfolio = portfolioText[language]
-  const portfolioItems = industryPortfolio[industry]
+  const portfolioItems = [...industryPortfolio[industry]].sort(
+    (a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
+  )
   const sectorQuestions = industry === "restaurants" || industry === "beauty"
     ? questions[industry][language]
     : null
@@ -588,8 +591,12 @@ export default function IndustryPage({
           </div>
         </section>
 
+        {(industry === "restaurants" || industry === "beauty") && (
+          <IndividualServices language={language} mode="industry" />
+        )}
+
         {portfolioItems.length > 0 && <section className="industry-work" id="industry-work">
-          <div className="industry-section-number">03</div>
+          <div className="industry-section-number">04</div>
 
           <div>
             <span className="industry-label">{portfolio.label}</span>
@@ -597,16 +604,23 @@ export default function IndustryPage({
             <p className="industry-work-intro">{portfolio.intro}</p>
 
               <div className="industry-work-grid">
-                {portfolioItems.map((item) => (
+                {portfolioItems.map((item, index) => {
+                  const mediaAlt = language === "ES"
+                    ? `${item.type === "image" ? "Fotografía" : "Video"} de portafolio ${index + 1}`
+                    : language === "PAP"
+                      ? `${item.type === "image" ? "Fotografia" : "Video"} di portafolio ${index + 1}`
+                      : `Portfolio ${item.type} ${index + 1}`
+
+                  return (
                   <article
-                    className={`industry-work-card${item.orientation === "landscape" ? " industry-work-card--landscape" : ""}`}
+                    className={`industry-work-card industry-work-card--${item.type}${item.orientation === "landscape" ? " industry-work-card--landscape" : ""}${item.featured ? " industry-work-card--featured" : ""}`}
                     key={item.src}
                   >
                     <div className="industry-work-media">
                       {item.type === "image" ? (
                         <Image
                           src={item.src}
-                          alt={item.alt[language]}
+                          alt={mediaAlt}
                           fill
                           sizes="(max-width: 700px) 100vw, 33vw"
                         />
@@ -616,26 +630,23 @@ export default function IndustryPage({
                           playsInline
                           preload="none"
                           poster={item.poster}
-                          aria-label={item.alt[language]}
+                          aria-label={mediaAlt}
                         >
                           <source src={item.src} type="video/mp4" />
                           {language === "ES" ? "Tu navegador no puede reproducir este video." : language === "PAP" ? "Bo browser no por reproduci e video aki." : "Your browser cannot play this video."}
                         </video>
                       )}
                     </div>
-                    <div className="industry-work-caption">
-                      <h3>{item.title[language]}</h3>
-                      <p>{item.description[language]}</p>
-                    </div>
                   </article>
-                ))}
+                  )
+                })}
               </div>
           </div>
         </section>}
 
         {sectorQuestions && (
           <section className="industry-questions" aria-labelledby="industry-questions-title">
-            <div className="industry-section-number">{portfolioItems.length > 0 ? "04" : "03"}</div>
+            <div className="industry-section-number">{portfolioItems.length > 0 ? "05" : "04"}</div>
             <div>
               <span className="industry-label">
                 {language === "ES" ? "PREGUNTAS FRECUENTES" : language === "PAP" ? "PREGUNTANAN FREKUENTE" : "COMMON QUESTIONS"}
@@ -658,7 +669,7 @@ export default function IndustryPage({
 
         <section className="industry-cta">
           <span className="industry-label">
-            {String(3 + Number(portfolioItems.length > 0) + Number(Boolean(sectorQuestions))).padStart(2, "0")} / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
+            {String(4 + Number(portfolioItems.length > 0) + Number(Boolean(sectorQuestions))).padStart(2, "0")} / {language === "ES" ? "HABLEMOS" : language === "PAP" ? "LAGA NOS PAPIA" : "LET'S TALK"}
           </span>
 
           <h2>{t.ctaTitle}</h2>

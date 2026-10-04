@@ -119,7 +119,7 @@ export default function Navbar() {
         {/* NAVIGATION */}
 
         <div className="nav-links">
-          <Link href="/#services">
+          <Link href="/#individual-services">
             {t.work}
           </Link>
 
