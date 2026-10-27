@@ -1,5 +1,7 @@
 "use client"
 
+import { localizedPath } from "@/lib/locales"
+
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage, type Language } from "@/components/LanguageProvider"
@@ -534,7 +536,7 @@ export default function IndustryPage({
       <div className="industry-page-glow" />
 
       <div className="industry-page-inner">
-        <Link href="/" className="industry-back">
+        <Link href={localizedPath("/", language)} className="industry-back">
           ← {t.back}
         </Link>
 
@@ -544,7 +546,7 @@ export default function IndustryPage({
           <h1>{t.title}</h1>
 
           <p className="industry-intro">{t.intro}</p>
-          {t.priceNote && <Link href={industry === "beauty" ? "/?sector=beauty#packages" : "/?sector=food#packages"} className="industry-price-link">{t.priceNote} →</Link>}
+          {t.priceNote && <Link href={localizedPath(industry === "beauty" ? "/?sector=beauty#packages" : "/?sector=food#packages", language)} className="industry-price-link">{t.priceNote} →</Link>}
         </div>
 
         <section className="industry-problem">
@@ -574,7 +576,7 @@ export default function IndustryPage({
             <div className="industry-service-list">
               {t.services.map((service, index) => (
                 <Link
-                  href={serviceRoutes[industry][index]}
+                  href={localizedPath(serviceRoutes[industry][index], language)}
                   className="industry-service"
                   key={service}
                 >
@@ -659,7 +661,7 @@ export default function IndustryPage({
                   <article className="industry-question" key={question}>
                     <h3>{question}</h3>
                     <p>{answer}</p>
-                    <Link href={href}>{link} ↗</Link>
+                    <Link href={localizedPath(href, language)}>{link} ↗</Link>
                   </article>
                 ))}
               </div>

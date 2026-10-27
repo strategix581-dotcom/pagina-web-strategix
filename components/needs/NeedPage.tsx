@@ -1,5 +1,7 @@
 "use client"
 
+import { localizedPath } from "@/lib/locales"
+
 import Link from "next/link"
 import { useLanguage, type Language } from "@/components/LanguageProvider"
 
@@ -937,7 +939,7 @@ export default function NeedPage({ slug }: { slug: string }) {
         <section className="need-page-hero">
           <div className="need-page-container">
             <p>Page not found.</p>
-            <Link href="/">← Back home</Link>
+            <Link href={localizedPath("/", language)}>← Back home</Link>
           </div>
         </section>
       </main>
@@ -971,7 +973,7 @@ export default function NeedPage({ slug }: { slug: string }) {
         <div className="need-page-container">
 
           <div className="need-page-top">
-            <Link href="/" className="need-back">
+            <Link href={localizedPath("/", language)} className="need-back">
               ← {backText}
             </Link>
 
