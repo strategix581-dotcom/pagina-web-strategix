@@ -1,0 +1,156 @@
+{
+  "/": {
+    "es": {
+      "title": "Strategix | Marketing, contenido y soluciones digitales en Curaçao",
+      "description": "Contenido, redes sociales, diseño web, reservas y automatizaciones para negocios en Curaçao. Paquetes mensuales con precios claros y proyectos a medida."
+    },
+    "en": {
+      "title": "Marketing, content & digital solutions in Curaçao | Strategix",
+      "description": "Photography, Reels, social media, websites and booking systems for businesses in Curaçao. Clear prices and monthly packages."
+    },
+    "pap": {
+      "title": "Marketing, kontenido i solushon digital na Kòrsou | Strategix",
+      "description": "Fotografia, Reels, rednan sosial, website i sistema di reservashon pa negoshinan na Kòrsou. Preisnan kla i paketnan mensual."
+    }
+  },
+  "/restaurants": {
+    "es": {
+      "title": "Marketing y contenido para restaurantes en Curaçao | Strategix",
+      "description": "¿Tu restaurante no se ve tan bien en redes como en persona? Fotografía gastronómica, Reels y manejo de redes en Curaçao. Paquetes desde 900 XCG al mes."
+    },
+    "en": {
+      "title": "Restaurant marketing & food photography in Curaçao | Strategix",
+      "description": "Food photography, Reels and social media management for restaurants in Curaçao. Explore our portfolio and packages from XCG 900 per month."
+    },
+    "pap": {
+      "title": "Marketing i fotografia pa restorant na Kòrsou | Strategix",
+      "description": "Fotografia gastronomiko, Reels i maneho di rednan sosial pa restorant na Kòrsou. Mira nos portafolio i paketnan for di XCG 900 pa luna."
+    }
+  },
+  "/needs/online-bookings": {
+    "es": {
+      "title": "Sistemas de reservas online en Curaçao | Strategix",
+      "description": "¿Pierdes citas entre mensajes y llamadas? Creamos webs con reservas para que tus clientes puedan dar el siguiente paso. Desde 2.500 XCG según alcance."
+    },
+    "en": {
+      "title": "Online booking systems in Curaçao | Strategix",
+      "description": "Websites with booking systems that make appointments easier for businesses in Curaçao. From XCG 2,500 depending on scope."
+    },
+    "pap": {
+      "title": "Sistema di reservashon online na Kòrsou | Strategix",
+      "description": "Website ku sistema di reservashon pa hasi sita mas fásil pa negoshinan na Kòrsou. For di XCG 2.500 segun e proyekto."
+    }
+  },
+  "/needs/social-media": {
+    "es": {
+      "title": "Manejo de redes sociales en Curaçao | Strategix",
+      "description": "¿No tienes tiempo para publicar en Instagram y Facebook? Planificamos y creamos contenido para tu negocio en Curaçao. Paquetes desde 900 XCG al mes."
+    },
+    "en": {
+      "title": "Social media management in Curaçao | Strategix",
+      "description": "Content planning and Instagram and Facebook management for businesses in Curaçao. Monthly packages from XCG 900."
+    },
+    "pap": {
+      "title": "Maneho di rednan sosial na Kòrsou | Strategix",
+      "description": "Planifikashon di kontenido i maneho di Instagram i Facebook pa negoshinan na Kòrsou. Paketnan mensual for di XCG 900."
+    }
+  },
+  "/needs/website": {
+    "es": {
+      "title": "Diseño de páginas web en Curaçao | Strategix",
+      "description": "¿Tus clientes no encuentran una explicación clara de tus servicios y precios? Diseñamos webs fáciles de usar en Curaçao. Landing desde 1.000 XCG."
+    },
+    "en": {
+      "title": "Website design in Curaçao | Strategix",
+      "description": "Clear, mobile-friendly websites for businesses in Curaçao. Landing pages from XCG 1,000. Show your services and make contact easier."
+    },
+    "pap": {
+      "title": "Diseño di website na Kòrsou | Strategix",
+      "description": "Website kla i fásil pa usa riba telefòn pa negoshinan na Kòrsou. Landing page for di XCG 1.000. Mustra bo servisionan i fasilitá kontakto."
+    }
+  },
+  "/needs/better-content": {
+    "es": {
+      "title": "Fotografía y Reels para negocios en Curaçao | Strategix",
+      "description": "¿Tus fotos no muestran la calidad de tu negocio? Creamos fotografía, video y Reels en Curaçao. Reels desde 200 XCG y fotos desde 350 XCG."
+    },
+    "en": {
+      "title": "Business photography & Reels in Curaçao | Strategix",
+      "description": "Professional photography, video and Reels for businesses in Curaçao. Reels from XCG 200 and photography from XCG 350."
+    },
+    "pap": {
+      "title": "Fotografia i Reels pa negoshi na Kòrsou | Strategix",
+      "description": "Fotografia profesional, video i Reels pa negoshinan na Kòrsou. Reels for di XCG 200 i fotografia for di XCG 350."
+    }
+  },
+  "/needs/advertising": {
+    "es": {
+      "title": "Anuncios de Instagram y Facebook en Curaçao | Strategix",
+      "description": "¿Tus anuncios reciben vistas pero pocas consultas? Creamos campañas de Meta Ads con objetivo, contenido y medición claros. Presupuesto publicitario aparte."
+    },
+    "en": {
+      "title": "Facebook & Instagram advertising in Curaçao | Strategix",
+      "description": "Meta Ads campaigns with clear goals, creative content and measurement for businesses in Curaçao. Advertising budget is separate."
+    },
+    "pap": {
+      "title": "Anunsio di Facebook i Instagram na Kòrsou | Strategix",
+      "description": "Kampañanan di Meta Ads ku meta kla, kontenido kreativo i medishon pa negoshinan na Kòrsou. Presupuesto di anunsio ta aparte."
+    }
+  },
+  "/needs/more-customers": {
+    "es": {
+      "title": "Marketing para atraer clientes en Curaçao | Strategix",
+      "description": "¿Tu negocio se ve en redes pero no recibe suficientes consultas? Unimos contenido, redes, anuncios y web según el problema real de tu negocio en Curaçao."
+    },
+    "en": {
+      "title": "Marketing for local businesses in Curaçao | Strategix",
+      "description": "Content, social media, advertising and websites built around your business needs in Curaçao. Help customers find you and get in touch."
+    },
+    "pap": {
+      "title": "Marketing pa negoshinan lokal na Kòrsou | Strategix",
+      "description": "Kontenido, rednan sosial, anunsio i website segun nesesidat di bo negoshi na Kòrsou. Yuda kliente haña bo i tuma kontakto."
+    }
+  },
+  "/beauty": {
+    "es": {
+      "title": "Marketing para salones de belleza en Curaçao | Strategix",
+      "description": "¿Tienes huecos en tu agenda? Creamos contenido, redes y opciones de reserva para salones, spas y negocios de belleza en Curaçao. Paquetes desde 900 XCG."
+    },
+    "en": {
+      "title": "Beauty salon marketing in Curaçao | Strategix",
+      "description": "Photography, Reels, social media and booking solutions for salons, spas and beauty businesses in Curaçao. Packages from XCG 900."
+    },
+    "pap": {
+      "title": "Marketing pa salon di beleza na Kòrsou | Strategix",
+      "description": "Fotografia, Reels, rednan sosial i solushon di reservashon pa salon, spa i negoshi di beleza na Kòrsou. Paketnan for di XCG 900."
+    }
+  },
+  "/clinics": {
+    "es": {
+      "title": "Marketing para clínicas privadas en Curaçao | Strategix",
+      "description": "Una web clara, contenido profesional y citas fáciles de solicitar para clínicas privadas en Curaçao. Estrategia digital según las necesidades de tu práctica."
+    },
+    "en": {
+      "title": "Marketing for private clinics in Curaçao | Strategix",
+      "description": "Clear websites, professional content and easier appointment enquiries for private clinics in Curaçao. Digital solutions for your practice."
+    },
+    "pap": {
+      "title": "Marketing pa klínika privá na Kòrsou | Strategix",
+      "description": "Website kla, kontenido profesional i solushon pa pidi sita mas fásil na klínika privá na Kòrsou."
+    }
+  },
+  "/dental": {
+    "es": {
+      "title": "Marketing para clínicas dentales en Curaçao | Strategix",
+      "description": "Ayudamos a clínicas dentales en Curaçao a explicar sus servicios y facilitar el contacto con web, contenido, redes sociales y sistemas de citas."
+    },
+    "en": {
+      "title": "Dental clinic marketing in Curaçao | Strategix",
+      "description": "Websites, content, social media and appointment systems that help dental clinics in Curaçao explain their services and connect with patients."
+    },
+    "pap": {
+      "title": "Marketing pa klínika dental na Kòrsou | Strategix",
+      "description": "Website, kontenido, rednan sosial i sistema di sita pa yuda klínika dental na Kòrsou splika nan servisionan i fasilitá kontakto."
+    }
+  }
+}

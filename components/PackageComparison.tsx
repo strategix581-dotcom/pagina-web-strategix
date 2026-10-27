@@ -1,5 +1,7 @@
 "use client"
 
+import { localizedPath, packageMessage } from "@/lib/locales"
+
 import { useEffect, useState } from "react"
 import type { Language } from "@/components/LanguageProvider"
 
@@ -111,7 +113,8 @@ export default function PackageComparison({ language }: { language: Language }) 
   useEffect(() => {
     const requestedSector = new URLSearchParams(window.location.search).get("sector")
     if (requestedSector === "food" || requestedSector === "beauty" || requestedSector === "nails") {
-      setSector(requestedSector)
+      const frame = requestAnimationFrame(() => setSector(requestedSector))
+      return () => cancelAnimationFrame(frame)
     }
   }, [])
   const t = content[language]
@@ -122,7 +125,7 @@ export default function PackageComparison({ language }: { language: Language }) 
       {(Object.keys(t.sectors) as Sector[]).map(key => <button key={key} type="button" className={sector === key ? "active" : ""} aria-pressed={sector === key} onClick={() => setSector(key)}>{t.sectors[key]}</button>)}
     </div>
     <p className="sector-intro">{t.intros[sector]}</p>
-    {sector !== "nails" && <a className="sector-detail-link" href={sector === "food" ? "/restaurants" : "/beauty"}>{t.sectorDetails} →</a>}
+    {sector !== "nails" && <a className="sector-detail-link" href={localizedPath(sector === "food" ? "/restaurants" : "/beauty", language)}>{t.sectorDetails} →</a>}
     <div className="package-grid">
       {plans.map(plan => {
         const name = t.names[plan.name as keyof typeof t.names]
@@ -140,7 +143,7 @@ export default function PackageComparison({ language }: { language: Language }) 
           <h3>{name}</h3>
           <div className="package-price"><span>XCG</span><strong>{plan.price}</strong><small>{t.month}</small></div>
           <ul className="package-inclusions">{details.map(item => <li key={item}>{item}</li>)}</ul>
-          <a href={`${whatsapp}?text=${encodeURIComponent(`Hola, me interesa el paquete ${name} para ${t.sectors[sector]} de Strategix.`)}`} target="_blank" rel="noopener noreferrer">{t.cta} <span aria-hidden="true">↗</span></a>
+          <a href={`${whatsapp}?text=${encodeURIComponent(packageMessage(language, name, t.sectors[sector]))}`} target="_blank" rel="noopener noreferrer">{t.cta} <span aria-hidden="true">↗</span></a>
         </article>
       })}
     </div>

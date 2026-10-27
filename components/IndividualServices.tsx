@@ -1,3 +1,4 @@
+import { serviceMessage } from "@/lib/locales"
 import type { Language } from "@/components/LanguageProvider"
 
 const whatsapp = "https://wa.me/59996931075"
@@ -96,7 +97,7 @@ export default function IndividualServices({ language, mode = "home" }: { langua
                 </div>
               ))}
             </div>
-            <a href={`${whatsapp}?text=${encodeURIComponent(`Hola, quiero información sobre ${group.title} de Strategix.`)}`} target="_blank" rel="noopener noreferrer">{t.cta} ↗</a>
+            <a href={`${whatsapp}?text=${encodeURIComponent(serviceMessage(language, group.title))}`} target="_blank" rel="noopener noreferrer">{t.cta} ↗</a>
           </article>
         ))}
       </div>

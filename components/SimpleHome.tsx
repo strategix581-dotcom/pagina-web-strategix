@@ -1,5 +1,7 @@
 "use client"
 
+import { localizedPath, serviceMessage, projectMessage } from "@/lib/locales"
+
 import Image from "next/image"
 import { useLanguage } from "@/components/LanguageProvider"
 import PackageComparison from "@/components/PackageComparison"
@@ -189,8 +191,8 @@ export default function SimpleHome() {
               <p>{description}</p>
               <strong className="service-price">{price}</strong>
               <div className="service-links">
-                <a className="service-detail-link" href={servicePaths[index]}>{t.serviceDetails} →</a>
-                <a className="service-link" href={`${whatsapp}?text=${encodeURIComponent(`Hola, quiero saber más sobre ${title} de Strategix.`)}`} target="_blank" rel="noopener noreferrer">{t.serviceCta} ↗</a>
+                <a className="service-detail-link" href={localizedPath(servicePaths[index], language)}>{t.serviceDetails} →</a>
+                <a className="service-link" href={`${whatsapp}?text=${encodeURIComponent(serviceMessage(language, title))}`} target="_blank" rel="noopener noreferrer">{t.serviceCta} ↗</a>
               </div>
             </article>
           ))}
@@ -205,14 +207,14 @@ export default function SimpleHome() {
             <p>{t.portfolioIntro}</p>
           </div>
           <div className="portfolio-entry-grid">
-            <a className="portfolio-entry" href="/beauty#industry-work">
+            <a className="portfolio-entry" href={localizedPath("/beauty#industry-work", language)}>
               <Image src="/portfolio/beauty/beauty-photo-03.jpg" alt={language === "ES" ? "Portafolio de fotografía Beauty" : language === "PAP" ? "Portafolio di fotografia Beauty" : "Beauty photography portfolio"} fill sizes="(max-width: 700px) 100vw, 50vw" />
               <span className="portfolio-entry-shade" />
               <div className="portfolio-entry-copy">
                 <span>01</span><h3>{t.portfolioBeauty}</h3><p>{t.portfolioBeautyText}</p><strong>{t.portfolioCta} ↗</strong>
               </div>
             </a>
-            <a className="portfolio-entry" href="/restaurants#industry-work">
+            <a className="portfolio-entry" href={localizedPath("/restaurants#industry-work", language)}>
               <Image src="/portfolio/restaurants/restaurant-photo-04.jpg" alt={language === "ES" ? "Portafolio de fotografía gastronómica" : language === "PAP" ? "Portafolio di fotografia gastronomiko" : "Food photography portfolio"} fill sizes="(max-width: 700px) 100vw, 50vw" />
               <span className="portfolio-entry-shade" />
               <div className="portfolio-entry-copy">
@@ -234,7 +236,7 @@ export default function SimpleHome() {
 
       <section className="simple-section page-shell custom-section" id="custom">
         <div><span className="eyebrow">{t.customLabel}</span><h2>{t.customTitle}</h2><p>{t.customBody}</p></div>
-        <div className="custom-price"><span>{t.customPrice}</span><a className="button-primary" href={`${whatsapp}?text=${encodeURIComponent("Hola, quiero cotizar un proyecto web o una automatización con Strategix.")}`} target="_blank" rel="noopener noreferrer">{t.customCta} ↗</a></div>
+        <div className="custom-price"><span>{t.customPrice}</span><a className="button-primary" href={`${whatsapp}?text=${encodeURIComponent(projectMessage[language])}`} target="_blank" rel="noopener noreferrer">{t.customCta} ↗</a></div>
       </section>
 
       <section className="simple-contact page-shell" id="contact">

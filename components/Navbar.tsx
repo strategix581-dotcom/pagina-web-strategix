@@ -1,5 +1,7 @@
 "use client"
 
+import { localizedPath } from "@/lib/locales"
+
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
@@ -100,7 +102,7 @@ export default function Navbar() {
       {/* LOGO */}
 
       <Link
-        href="/"
+        href={localizedPath("/", language)}
         className="nav-logo"
         aria-label="Strategix home"
       >
@@ -122,19 +124,19 @@ export default function Navbar() {
         {/* NAVIGATION */}
 
         <div className="nav-links">
-          <Link href="/#individual-services">
+          <Link href={localizedPath("/#individual-services", language)}>
             {t.work}
           </Link>
 
-          <Link href="/#portfolio">
+          <Link href={localizedPath("/#portfolio", language)}>
             {t.portfolio}
           </Link>
 
-          <Link href="/#packages">
+          <Link href={localizedPath("/#packages", language)}>
             {t.services}
           </Link>
 
-          <Link href="/#custom">
+          <Link href={localizedPath("/#custom", language)}>
             {t.about}
           </Link>
         </div>
